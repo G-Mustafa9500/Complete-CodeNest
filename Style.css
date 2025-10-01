@@ -1,0 +1,148 @@
+/* ================= HEADER ================= */
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+header {
+  position: fixed; /* hamesha top pe rahe */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(89, 89, 89, 0.4); /* Transparent black with opacity */
+  backdrop-filter: blur(6px);     /* Blur effect */
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000; /* content ke upar rahe */
+}
+
+header .main-heading {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  padding: 5px 10px;
+}
+
+nav a.active,
+nav a:hover {
+  color: yellow;
+  transform: scaleX(1.09);
+}
+
+/* Nav Right Buttons */
+.nav-right {
+  margin-left: 20px;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.signup {
+  background: yellow;
+  color: black;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+.signup:hover {
+  background: #000000;
+  color: yellow;
+  transform: scaleX(1.09);
+}
+
+.login {
+  background: yellow;
+  color: black;
+  padding: 5px 12px;
+  border-radius: 5px;
+}
+
+.login:hover {
+  background: #000000;
+  color: yellow;
+  transform: scaleX(1.09);
+  
+}
+
+/* Important: Content ke upar header overlap na ho */
+.footer {
+  background: #000000cc;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+  border-top: 2px solid white ;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 220px;
+  margin: 15px;
+}
+
+.footer-section h4 {
+  color: #f2ff00;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 8px 0;
+}
+
+.footer-section ul li a {
+  color: #767674;
+  text-decoration: none;
+  display: flex;             /* icon + text ek line me */
+  align-items: center;
+  gap: 8px;                  /* icon aur text ke beech gap */
+  transition: color 0.2s;
+}
+
+.footer-section ul li a img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0.8);
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #fff;
+}
+
+.footer-section ul li a:hover img {
+  filter: brightness(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+

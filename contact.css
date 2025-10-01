@@ -1,0 +1,91 @@
+/* ================= CONTACT PAGE ================= */
+/* === CONTACT PAGE START === */
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background:
+              url("tyler-franta-iusJ25iYu1c-unsplash.jpg") no-repeat center/cover;
+}
+
+.contact-hero {
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+    background-color: #0000005a;
+    backdrop-filter: blur(2px);
+    font-size: 20px;
+    margin-top: 150px;
+
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 40px;
+  color: white;
+
+}
+
+
+.maps{
+    margin-top: 13px;
+    width: 100%;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  background: rgba(0, 0, 0, 0.224);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: white;
+  backdrop-filter: blur(2px);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-info p{
+    font-size: 19px;
+}
+.contact-info h3 {
+    font-size: 25px;
+}
+
+.contact-form button {
+  background: yellow;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: black;
+  color: yellow;
+}
+footer p{
+    padding: 18px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    outline: none;
+    font-weight: 500;
+}

@@ -1,0 +1,91 @@
+/* ================= HERO SECTION (HOME) ================= */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.mainhome{
+    background: url("carriza-maiquez-sUIdCvblysI-unsplash.jpg") no-repeat center/cover;
+    padding: 0%;
+    margin: 0;
+}
+
+.hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  backdrop-filter: blur(2.5px);
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.562);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 160px;
+
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: yellow;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #000000;
+  color: yellow;
+}
+
+/* ================= FEATURES / COURSES BOX ================= */
+.features {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.h2 {
+    margin-bottom: 30px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.411);
+}
+
+.course-box {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 0, 0.646);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 250px;
+  color: rgb(0, 0, 0);
+  backdrop-filter: 
+  blur(2.5px);
+}
+footer{
+    background-color: rgba(89, 89, 89, 0.4);
+}
+footer p{
+    padding: 18px;
+    
+    color: rgb(255, 255, 255);
+}

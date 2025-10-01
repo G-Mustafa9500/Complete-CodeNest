@@ -1,0 +1,2911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Tutorial - Complete Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="logo">
+                <i class="fab fa-react"></i>
+                <span>React Tutorial</span>
+            </div>
+        </header>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-title">Getting Started</div>
+                <div class="sidebar-item active" data-section="introduction">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Introduction to React</span>
+                </div>
+                <div class="sidebar-item" data-section="setup">
+                    <i class="fas fa-cogs"></i>
+                    <span>Setup & Installation</span>
+                </div>
+                <div class="sidebar-item" data-section="jsx">
+                    <i class="fab fa-react"></i>
+                    <span>JSX</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Core Concepts</div>
+                <div class="sidebar-item" data-section="components">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <span>Components</span>
+                </div>
+                <div class="sidebar-item" data-section="props">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Props</span>
+                </div>
+                <div class="sidebar-item" data-section="state">
+                    <i class="fas fa-database"></i>
+                    <span>State</span>
+                </div>
+                <div class="sidebar-item" data-section="lifecycle">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Component Lifecycle</span>
+                </div>
+                <div class="sidebar-item" data-section="hooks">
+                    <i class="fas fa-code"></i>
+                    <span>Hooks</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Advanced Concepts</div>
+                <div class="sidebar-item" data-section="context">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Context API</span>
+                </div>
+                <div class="sidebar-item" data-section="router">
+                    <i class="fas fa-route"></i>
+                    <span>React Router</span>
+                </div>
+                <div class="sidebar-item" data-section="redux">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Redux</span>
+                </div>
+                <div class="sidebar-item" data-section="optimization">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Performance Optimization</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <div class="sidebar-title">Testing & Deployment</div>
+                <div class="sidebar-item" data-section="testing">
+                    <i class="fas fa-vial"></i>
+                    <span>Testing</span>
+                </div>
+                <div class="sidebar-item" data-section="deployment">
+                    <i class="fas fa-rocket"></i>
+                    <span>Deployment</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Introduction Section -->
+            <section class="content-section active" id="introduction">
+                <h1 class="section-title">Introduction to React</h1>
+                <p class="section-paragraph">
+                    React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
+                </p>
+                <p class="section-paragraph">
+                    React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called "components".
+                </p>
+                
+                <h2 class="section-subtitle">Why React?</h2>
+                <div class="list-item">Component-Based Architecture - Build encapsulated components that manage their own state, then compose them to make complex UIs.</div>
+                <div class="list-item">Learn Once, Write Anywhere - We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code.</div>
+                <div class="list-item">Virtual DOM - React uses a virtual DOM to improve performance. It creates an in-memory data structure cache, computes the resulting differences, and then updates the browser's displayed DOM efficiently.</div>
+                <div class="list-item">Unidirectional Data Flow - Data flows down from parent components to child components through props, making the application's state more predictable and easier to understand.</div>
+                
+                <h2 class="section-subtitle">Key Features of React</h2>
+                <p class="section-paragraph">
+                    React has several key features that make it a popular choice for building modern web applications:
+                </p>
+                <div class="list-item">JSX - JSX is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files. It makes writing React components easier and more intuitive.</div>
+                <div class="list-item">Components - Components are the building blocks of React applications. They let you split the UI into independent, reusable pieces.</div>
+                <div class="list-item">Props - Props (short for properties) are how components talk to each other. They allow you to pass data from a parent component to a child component.</div>
+                <div class="list-item">State - State is a built-in React object that is used to contain data or information about the component. A component's state can change over time, and whenever it changes, the component re-renders.</div>
+                <div class="list-item">Lifecycle Methods - Lifecycle methods are special methods on the component class that run at particular times in a component's life.</div>
+                <div class="list-item">Hooks - Hooks are a new addition in React 16.8 that let you use state and other React features without writing a class.</div>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>React is not a framework, it's a library. It only handles the view layer of an application. To build a complete application, you might need to use other libraries along with React, such as React Router for routing, Redux for state management, etc.</p>
+                </div>
+            </section>
+
+            <!-- Setup Section -->
+            <section class="content-section" id="setup">
+                <h1 class="section-title">Setup & Installation</h1>
+                <p class="section-paragraph">
+                    To get started with React, you need to set up your development environment. There are several ways to set up a React project, but we'll cover the most common methods.
+                </p>
+                
+                <h2 class="section-subtitle">Prerequisites</h2>
+                <p class="section-paragraph">
+                    Before you start, make sure you have the following installed:
+                </p>
+                <div class="list-item">Node.js - React requires Node.js version 8.10 or higher. You can download it from <a href="https://nodejs.org/" style="color: var(--accent-color);">nodejs.org</a>.</div>
+                <div class="list-item">npm or yarn - npm comes with Node.js. Yarn is an alternative package manager that you can install separately.</div>
+                <div class="list-item">A code editor - Visual Studio Code is a popular choice for React development.</div>
+                
+                <h2 class="section-subtitle">Creating a React App with Create React App</h2>
+                <p class="section-paragraph">
+                    Create React App is an officially supported way to create single-page React applications. It offers a modern build setup with no configuration.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Terminal</div>
+                    <pre>npx create-react-app my-app
+cd my-app
+npm start</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    This will create a new React application in a directory called "my-app" and start the development server. You can view your application by opening <code style="background-color: rgba(255,255,255,0.1); padding: 2px 5px; border-radius: 3px;">http://localhost:3000</code> in your browser.
+                </p>
+                
+                <h2 class="section-subtitle">Project Structure</h2>
+                <p class="section-paragraph">
+                    After creating a React app with Create React App, your project structure will look like this:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Project Structure</div>
+                    <pre>my-app/
+  README.md
+  node_modules/
+  package.json
+  .gitignore
+  public/
+    index.html
+    favicon.ico
+  src/
+    App.css
+    App.js
+    App.test.js
+    index.css
+    index.js
+    logo.svg</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Understanding the Files</h2>
+                <div class="list-item"><strong>package.json</strong> - Contains information about the project, including dependencies, scripts, and metadata.</div>
+                <div class="list-item"><strong>public/index.html</strong> - The main HTML file that serves as the entry point for the application.</div>
+                <div class="list-item"><strong>src/index.js</strong> - The entry point for the React application. It renders the root component into the DOM.</div>
+                <div class="list-item"><strong>src/App.js</strong> - The main component of the application.</div>
+                
+                <h2 class="section-subtitle">Alternative Setup Methods</h2>
+                <p class="section-paragraph">
+                    Besides Create React App, there are other ways to set up a React project:
+                </p>
+                
+                <h3 class="section-subtitle">Using Vite</h3>
+                <p class="section-paragraph">
+                    Vite is a modern frontend build tool that provides a faster and leaner development experience.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Terminal</div>
+                    <pre>npm create vite@latest my-react-app -- --template react
+cd my-react-app
+npm install
+npm run dev</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Manual Setup</h3>
+                <p class="section-paragraph">
+                    If you prefer to set up your project manually, you can do so by including React and ReactDOM via CDN or by installing them with npm.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">HTML</div>
+                    <pre>&lt;!-- Using CDN --&gt;
+&lt;script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/@babel/standalone/babel.min.js"&gt;&lt;/script&gt;</pre>
+                </div>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>For production, it's recommended to use the minified versions of React and ReactDOM. Replace <code style="background-color: rgba(255,255,255,0.1); padding: 2px 5px; border-radius: 3px;">development.js</code> with <code style="background-color: rgba(255,255,255,0.1); padding: 2px 5px; border-radius: 3px;">production.min.js</code> in the script tags.</p>
+                </div>
+            </section>
+
+            <!-- JSX Section -->
+            <section class="content-section" id="jsx">
+                <h1 class="section-title">JSX</h1>
+                <p class="section-paragraph">
+                    JSX stands for JavaScript XML. It is a syntax extension for JavaScript that allows you to write HTML-like code in your JavaScript files. JSX makes writing React components easier and more intuitive.
+                </p>
+                
+                <h2 class="section-subtitle">Why JSX?</h2>
+                <p class="section-paragraph">
+                    React doesn't require using JSX, but most people find it helpful as a visual aid when working with UI inside the JavaScript code. It also allows React to show more useful error and warning messages.
+                </p>
+                
+                <h2 class="section-subtitle">Basic JSX Syntax</h2>
+                <p class="section-paragraph">
+                    Here's a basic example of JSX:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">JSX</div>
+                    <pre><span class="keyword">const</span> <span class="function">element</span> = <span class="tag">&lt;h1</span> <span class="attr">className</span>=<span class="string">"greeting"</span><span class="tag">&gt;</span>Hello, world!<span class="tag">&lt;/h1&gt;</span>;</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    This JSX code is equivalent to the following JavaScript code:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">JavaScript</div>
+                    <pre><span class="keyword">const</span> <span class="function">element</span> = React.<span class="function">createElement</span>(
+  <span class="string">'h1'</span>,
+  {<span class="attr">className</span>: <span class="string">'greeting'</span>},
+  <span class="string">'Hello, world!'</span>
+);</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Embedding Expressions in JSX</h2>
+                <p class="section-paragraph">
+                    You can embed any JavaScript expression in JSX by wrapping it in curly braces:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">JSX</div>
+                    <pre><span class="keyword">const</span> <span class="function">name</span> = <span class="string">'John Doe'</span>;
+<span class="keyword">const</span> <span class="function">element</span> = <span class="tag">&lt;h1&gt;</span>Hello, {name}<span class="tag">&lt;/h1&gt;</span>;</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    You can also use JavaScript expressions in JSX attributes:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">JSX</div>
+                    <pre><span class="keyword">const</span> <span class="function">className</span> = <span class="string">'container'</span>;
+<span class="keyword">const</span> <span class="function">element</span> = <span class="tag">&lt;div</span> <span class="attr">className</span>={className}<span class="tag">&gt;</span>Content<span class="tag">&lt;/div&gt;</span>;</pre>
+                </div>
+                
+                <h2 class="section-subtitle">JSX Represents Objects</h2>
+                <p class="section-paragraph">
+                    Babel compiles JSX down to React.createElement() calls. These objects are called "React elements". You can think of them as descriptions of what you want to see on the screen.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">JSX</div>
+                    <pre><span class="comment">// This JSX:</span>
+<span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"sidebar"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="string">"avatar.png"</span> <span class="attr">className</span>=<span class="string">"avatar"</span> <span class="tag">/&gt;</span>
+  <span class="tag">&lt;h3&gt;</span>{user.name}<span class="tag">&lt;/h3&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+
+<span class="comment">// Compiles to:</span>
+React.<span class="function">createElement</span>(
+  <span class="string">'div'</span>,
+  {<span class="attr">className</span>: <span class="string">'sidebar'</span>},
+  React.<span class="function">createElement</span>(<span class="string">'img'</span>, {<span class="attr">src</span>: <span class="string">'avatar.png'</span>, <span class="attr">className</span>: <span class="string">'avatar'</span>}),
+  React.<span class="function">createElement</span>(<span class="string">'h3'</span>, <span class="keyword">null</span>, user.name)
+);</pre>
+                </div>
+                
+                <h2 class="section-subtitle">JSX Properties</h2>
+                <p class="section-paragraph">
+                    JSX uses camelCase property naming convention instead of HTML attribute names. For example, <code style="background-color: rgba(255,255,255,0.1); padding: 2px 5px; border-radius: 3px;">class</code> becomes <code style="background-color: rgba(255,255,255,0.1); padding: 2px 5px; border-radius: 3px;">className</code> in JSX, and <code style="background-color: rgba(255,255,255,0.1); padding: 2px 5px; border-radius: 3px;">tabindex</code> becomes <code style="background-color: rgba(255,255,255,0.1); padding: 2px 5px; border-radius: 3px;">tabIndex</code>.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">JSX</div>
+                    <pre><span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"container"</span> <span class="attr">tabIndex</span>={0}<span class="tag">&gt;</span>
+  <span class="tag">&lt;button</span> <span class="attr">onClick</span>={handleClick}<span class="tag">&gt;</span>Click me<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre>
+                </div>
+                
+                <h2 class="section-subtitle">JSX Children</h2>
+                <p class="section-paragraph">
+                    JSX tags can contain children, just like HTML:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">JSX</div>
+                    <pre><span class="tag">&lt;div&gt;</span>
+  <span class="tag">&lt;h1&gt;</span>Title<span class="tag">&lt;/h1&gt;</span>
+  <span class="tag">&lt;p&gt;</span>Paragraph<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/div&gt;</span></pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    You can also use expressions as children:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">JSX</div>
+                    <pre><span class="keyword">function</span> <span class="function">Item</span>(props) {
+  <span class="keyword">return</span> <span class="tag">&lt;li&gt;</span>{props.message}<span class="tag">&lt;/li&gt;</span>;
+}
+
+<span class="keyword">function</span> <span class="function">TodoList</span>() {
+  <span class="keyword">const</span> <span class="function">todos</span> = [<span class="string">'Finish homework'</span>, <span class="string">'Buy groceries'</span>, <span class="string">'Call mom'</span>];
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;ul&gt;</span>
+      {todos.<span class="function">map</span>((todo, index) => (
+        <span class="tag">&lt;Item</span> <span class="attr">key</span>={index} <span class="attr">message</span>={todo} <span class="tag">/&gt;</span>
+      ))}
+    <span class="tag">&lt;/ul&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">JSX Prevents Injection Attacks</h2>
+                <p class="section-paragraph">
+                    By default, React DOM escapes any values embedded in JSX before rendering them. This ensures that you can never inject anything that's not explicitly written in your application. Everything is converted to a string before being rendered.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">JSX</div>
+                    <pre><span class="keyword">const</span> <span class="function">input</span> = <span class="string">'&lt;script&gt;alert("Attack")&lt;/script&gt;'</span>;
+<span class="keyword">const</span> <span class="function">element</span> = <span class="tag">&lt;div&gt;</span>{input}<span class="tag">&lt;/div&gt;</span>;</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    In the above example, the script tag will not be executed. Instead, it will be rendered as plain text.
+                </p>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>JSX is a syntax extension for JavaScript, not a template engine. It has the full power of JavaScript, which means you can use variables, functions, and any other JavaScript expressions within JSX.</p>
+                </div>
+            </section>
+
+            <!-- Components Section -->
+            <section class="content-section" id="components">
+                <h1 class="section-title">Components</h1>
+                <p class="section-paragraph">
+                    Components are the building blocks of React applications. They let you split the UI into independent, reusable pieces, and think about each piece in isolation.
+                </p>
+                
+                <h2 class="section-subtitle">Types of Components</h2>
+                <p class="section-paragraph">
+                    There are two main types of components in React:
+                </p>
+                
+                <h3 class="section-subtitle">Functional Components</h3>
+                <p class="section-paragraph">
+                    Functional components are simple JavaScript functions that accept props as an argument and return React elements:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Functional Component</div>
+                    <pre><span class="keyword">function</span> <span class="function">Welcome</span>(props) {
+  <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Hello, {props.name}<span class="tag">&lt;/h1&gt;</span>;
+}</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    Or using arrow function syntax:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Functional Component (Arrow)</div>
+                    <pre><span class="keyword">const</span> <span class="function">Welcome</span> = (props) => {
+  <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Hello, {props.name}<span class="tag">&lt;/h1&gt;</span>;
+};</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Class Components</h3>
+                <p class="section-paragraph">
+                    Class components are ES6 classes that extend React.Component and have a render method that returns React elements:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Class Component</div>
+                    <pre><span class="keyword">class</span> <span class="function">Welcome</span> <span class="keyword">extends</span> React.<span class="function">Component</span> {
+  <span class="function">render</span>() {
+    <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Hello, {<span class="keyword">this</span>.props.name}<span class="tag">&lt;/h1&gt;</span>;
+  }
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Rendering Components</h2>
+                <p class="section-paragraph">
+                    Once you've defined a component, you can use it like an HTML tag:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Rendering a Component</div>
+                    <pre><span class="keyword">const</span> <span class="function">element</span> = <span class="tag">&lt;Welcome</span> <span class="attr">name</span>=<span class="string">"John"</span> <span class="tag">/&gt;</span>;
+ReactDOM.<span class="function">render</span>(element, document.<span class="function">getElementById</span>(<span class="string">'root'</span>));</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    React calls the Welcome component with {name: 'John'} as the props, and the Welcome component returns <code style="background-color: rgba(255,255,255,0.1); padding: 2px 5px; border-radius: 3px;">&lt;h1&gt;Hello, John&lt;/h1&gt;</code> as the result.
+                </p>
+                
+                <h2 class="section-subtitle">Composing Components</h2>
+                <p class="section-paragraph">
+                    Components can refer to other components in their output. This lets you use the same component abstraction for any level of detail.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Composing Components</div>
+                    <pre><span class="keyword">function</span> <span class="function">Welcome</span>(props) {
+  <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Hello, {props.name}<span class="tag">&lt;/h1&gt;</span>;
+}
+
+<span class="keyword">function</span> <span class="function">App</span>() {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+      <span class="tag">&lt;Welcome</span> <span class="attr">name</span>=<span class="string">"Sara"</span> <span class="tag">/&gt;</span>
+      <span class="tag">&lt;Welcome</span> <span class="attr">name</span>=<span class="string">"Cahal"</span> <span class="tag">/&gt;</span>
+      <span class="tag">&lt;Welcome</span> <span class="attr">name</span>=<span class="string">"Edite"</span> <span class="tag">/&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Extracting Components</h2>
+                <p class="section-paragraph">
+                    Don't be afraid to split components into smaller components. For example, consider this Comment component:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Before Extracting</div>
+                    <pre><span class="keyword">function</span> <span class="function">Comment</span>(props) {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"comment"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"user-info"</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;img</span> <span class="attr">className</span>=<span class="string">"avatar"</span>
+          <span class="attr">src</span>={props.author.avatarUrl}
+          <span class="attr">alt</span>={props.author.name}
+        <span class="tag">/&gt;</span>
+        <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"user-info-name"</span><span class="tag">&gt;</span>
+          {props.author.name}
+        <span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"comment-text"</span><span class="tag">&gt;</span>
+        {props.text}
+      <span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"comment-date"</span><span class="tag">&gt;</span>
+        {<span class="keyword">new</span> <span class="function">Date</span>(props.date).<span class="function">toLocaleDateString</span>()}
+      <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    This component can be split into smaller components:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">After Extracting</div>
+                    <pre><span class="keyword">function</span> <span class="function">Avatar</span>(props) {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;img</span> <span class="attr">className</span>=<span class="string">"avatar"</span>
+      <span class="attr">src</span>={props.user.avatarUrl}
+      <span class="attr">alt</span>={props.user.name}
+    <span class="tag">/&gt;</span>
+  );
+}
+
+<span class="keyword">function</span> <span class="function">UserInfo</span>(props) {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"user-info"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;Avatar</span> <span class="attr">user</span>={props.user} <span class="tag">/&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"user-info-name"</span><span class="tag">&gt;</span>
+        {props.user.name}
+      <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}
+
+<span class="keyword">function</span> <span class="function">Comment</span>(props) {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"comment"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;UserInfo</span> <span class="attr">user</span>={props.author} <span class="tag">/&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"comment-text"</span><span class="tag">&gt;</span>
+        {props.text}
+      <span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"comment-date"</span><span class="tag">&gt;</span>
+        {<span class="keyword">new</span> <span class="function">Date</span>(props.date).<span class="function">toLocaleDateString</span>()}
+      <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Props are Read-Only</h2>
+                <p class="section-paragraph">
+                    Whether you declare a component as a function or a class, it must never modify its own props. Consider this sum function:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Pure Function</div>
+                    <pre><span class="keyword">function</span> <span class="function">sum</span>(a, b) {
+  <span class="keyword">return</span> a + b;
+}</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    Such functions are called "pure" because they do not attempt to change their inputs, and always return the same result for the same inputs.
+                </p>
+                
+                <p class="section-paragraph">
+                    In contrast, this function is impure because it changes its own input:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Impure Function</div>
+                    <pre><span class="keyword">function</span> <span class="function">withdraw</span>(account, amount) {
+  account.total -= amount;
+}</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    React is pretty flexible but it has a single strict rule: <strong>All React components must act like pure functions with respect to their props.</strong>
+                </p>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>Of course, application UIs are dynamic and change over time. In the next section, we will introduce a new concept called "state". State allows React components to change their output over time in response to user actions, network responses, and anything else, without violating this rule.</p>
+                </div>
+            </section>
+
+            <!-- Props Section -->
+            <section class="content-section" id="props">
+                <h1 class="section-title">Props</h1>
+                <p class="section-paragraph">
+                    Props (short for properties) are how components talk to each other. They allow you to pass data from a parent component to a child component.
+                </p>
+                
+                <h2 class="section-subtitle">Passing Props</h2>
+                <p class="section-paragraph">
+                    You can pass props to a component just like you would pass attributes to an HTML element:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Passing Props</div>
+                    <pre><span class="tag">&lt;Welcome</span> <span class="attr">name</span>=<span class="string">"Sara"</span> <span class="attr">age</span>={25} <span class="tag">/&gt;</span></pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    In the above example, we're passing two props to the Welcome component: name (a string) and age (a number). Note that when passing non-string values, you need to use curly braces {}.
+                </p>
+                
+                <h2 class="section-subtitle">Accessing Props</h2>
+                <p class="section-paragraph">
+                    In a functional component, props are passed as the first argument:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Functional Component Props</div>
+                    <pre><span class="keyword">function</span> <span class="function">Welcome</span>(props) {
+  <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Hello, {props.name}, you are {props.age} years old!<span class="tag">&lt;/h1&gt;</span>;
+}</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    In a class component, props are accessible via this.props:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Class Component Props</div>
+                    <pre><span class="keyword">class</span> <span class="function">Welcome</span> <span class="keyword">extends</span> React.<span class="function">Component</span> {
+  <span class="function">render</span>() {
+    <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Hello, {<span class="keyword">this</span>.props.name}, you are {<span class="keyword">this</span>.props.age} years old!<span class="tag">&lt;/h1&gt;</span>;
+  }
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Default Props</h2>
+                <p class="section-paragraph">
+                    You can define default values for your props by assigning to the special defaultProps property:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Default Props</div>
+                    <pre><span class="keyword">function</span> <span class="function">Welcome</span>(props) {
+  <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Hello, {props.name}<span class="tag">&lt;/h1&gt;</span>;
+}
+
+Welcome.defaultProps = {
+  name: <span class="string">'Guest'</span>
+};</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    If Welcome is rendered without a name prop, it will display "Hello, Guest".
+                </p>
+                
+                <h2 class="section-subtitle">Prop Types</h2>
+                <p class="section-paragraph">
+                    As your app grows, you can catch a lot of bugs with typechecking. For some applications, you can use JavaScript extensions like Flow or TypeScript to typecheck your whole application. But even if you don't use those, React has some built-in typechecking abilities. To run typechecking on the props for a component, you can assign the special propTypes property:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Prop Types</div>
+                    <pre><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;
+
+<span class="keyword">function</span> <span class="function">Welcome</span>(props) {
+  <span class="keyword">return</span> <span class="tag">&lt;h1&gt;</span>Hello, {props.name}<span class="tag">&lt;/h1&gt;</span>;
+}
+
+Welcome.propTypes = {
+  name: PropTypes.string
+};</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    Here are some different validators provided by PropTypes:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Prop Types Validators</div>
+                    <pre>MyComponent.propTypes = {
+  <span class="comment">// You can declare that a prop is a specific JS type. By default, these</span>
+  <span class="comment">// are all optional.</span>
+  optionalArray: PropTypes.array,
+  optionalBool: PropTypes.bool,
+  optionalFunc: PropTypes.func,
+  optionalNumber: PropTypes.number,
+  optionalObject: PropTypes.object,
+  optionalString: PropTypes.string,
+  optionalSymbol: PropTypes.symbol,
+
+  <span class="comment">// Anything that can be rendered: numbers, strings, elements or an array</span>
+  <span class="comment">// (or fragment) containing these types.</span>
+  optionalNode: PropTypes.node,
+
+  <span class="comment">// A React element.</span>
+  optionalElement: PropTypes.element,
+
+  <span class="comment">// You can also declare that a prop is an instance of a class. This uses</span>
+  <span class="comment">// JS's instanceof operator.</span>
+  optionalMessage: PropTypes.instanceOf(Message),
+
+  <span class="comment">// You can ensure that your prop is limited to specific values by treating</span>
+  <span class="comment">// it as an enum.</span>
+  optionalEnum: PropTypes.oneOf(['News', 'Photos']),
+
+  <span class="comment">// An object that could be one of many types</span>
+  optionalUnion: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    PropTypes.instanceOf(Message)
+  ]),
+
+  <span class="comment">// An array of a certain type</span>
+  optionalArrayOf: PropTypes.arrayOf(PropTypes.number),
+
+  <span class="comment">// An object with property values of a certain type</span>
+  optionalObjectOf: PropTypes.objectOf(PropTypes.number),
+
+  <span class="comment">// An object taking on a particular shape</span>
+  optionalObjectWithShape: PropTypes.shape({
+    color: PropTypes.string,
+    fontSize: PropTypes.number
+  }),
+
+  <span class="comment">// You can chain any of the above with `isRequired` to make sure a warning</span>
+  <span class="comment">// is shown if the prop isn't provided.</span>
+  requiredFunc: PropTypes.func.isRequired,
+
+  <span class="comment">// A value of any data type</span>
+  requiredAny: PropTypes.any.isRequired,
+
+  <span class="comment">// You can also specify a custom validator. It should return an Error</span>
+  <span class="comment">// object if the validation fails. Don't `console.warn` or throw, as this</span>
+  <span class="comment">// won't work inside `oneOfType`.</span>
+  customProp: <span class="keyword">function</span>(props, propName, componentName) {
+    <span class="keyword">if</span> (!/matchme/.<span class="function">test</span>(props[propName])) {
+      <span class="keyword">return</span> <span class="keyword">new</span> <span class="function">Error</span>(
+        <span class="string">'Invalid prop `'</span> + propName + <span class="string">'` supplied to'</span> +
+        <span class="string">' `'</span> + componentName + <span class="string">'`. Validation failed.'</span>
+      );
+    }
+  },
+
+  <span class="comment">// You can also supply a custom validator to `arrayOf` and `objectOf`.</span>
+  <span class="comment">// It should return an Error object if the validation fails. The validator</span>
+  <span class="comment">// will be called for each key in the array or object. The first two</span>
+  <span class="comment">// arguments of the validator are the array or object itself, and the</span>
+  <span class="comment">// current item's key.</span>
+  customArrayProp: PropTypes.arrayOf(<span class="keyword">function</span>(propValue, key, componentName, location, propFullName) {
+    <span class="keyword">if</span> (!/matchme/.<span class="function">test</span>(propValue[key])) {
+      <span class="keyword">return</span> <span class="keyword">new</span> <span class="function">Error</span>(
+        <span class="string">'Invalid prop `'</span> + propFullName + <span class="string">'` supplied to'</span> +
+        <span class="string">' `'</span> + componentName + <span class="string">'`. Validation failed.'</span>
+      );
+    }
+  })
+};</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Passing Props with the Spread Operator</h2>
+                <p class="section-paragraph">
+                    If you already have props as an object, and you want to pass it in JSX, you can use the spread ... operator to pass the whole props object:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Spread Operator</div>
+                    <pre><span class="keyword">function</span> <span class="function">App</span>() {
+  <span class="keyword">const</span> <span class="function">props</span> = {firstName: <span class="string">'John'</span>, lastName: <span class="string">'Doe'</span>};
+  <span class="keyword">return</span> <span class="tag">&lt;Greeting</span> {...props} <span class="tag">/&gt;</span>;
+}</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    This is equivalent to:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Equivalent to Spread Operator</div>
+                    <pre><span class="keyword">function</span> <span class="function">App</span>() {
+  <span class="keyword">return</span> <span class="tag">&lt;Greeting</span> <span class="attr">firstName</span>=<span class="string">"John"</span> <span class="attr">lastName</span>=<span class="string">"Doe"</span> <span class="tag">/&gt;</span>;
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Children Prop</h2>
+                <p class="section-paragraph">
+                    React components can also have children, which are passed as a special prop called children:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Children Prop</div>
+                    <pre><span class="keyword">function</span> <span class="function">Card</span>(props) {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"card"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"card-header"</span><span class="tag">&gt;</span>{props.title}<span class="tag">&lt;/div&gt;</span>
+      <span class="tag">&lt;div</span> <span class="attr">className</span>=<span class="string">"card-body"</span><span class="tag">&gt;</span>{props.children}<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}
+
+<span class="comment">// Usage</span>
+<span class="tag">&lt;Card</span> <span class="attr">title</span>=<span class="string">"Welcome"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;p&gt;</span>This is the content of the card.<span class="tag">&lt;/p&gt;</span>
+  <span class="tag">&lt;button&gt;</span>Click me<span class="tag">&lt;/button&gt;</span>
+<span class="tag">&lt;/Card&gt;</span></pre>
+                </div>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>Props are read-only. Whether you declare a component as a function or a class, it must never modify its own props. This is a core principle in React that makes your components predictable and easier to debug.</p>
+                </div>
+            </section>
+
+            <!-- State Section -->
+            <section class="content-section" id="state">
+                <h1 class="section-title">State</h1>
+                <p class="section-paragraph">
+                    State is a built-in React object that is used to contain data or information about the component. A component's state can change over time, and whenever it changes, the component re-renders.
+                </p>
+                
+                <h2 class="section-subtitle">State vs Props</h2>
+                <p class="section-paragraph">
+                    While props allow you to pass data from a parent component to a child component, state is managed within the component itself. Here are the key differences:
+                </p>
+                
+                <div class="list-item">Props are read-only, while state can be changed.</div>
+                <div class="list-item">Props are passed down from parent components, while state is managed within the component.</div>
+                <div class="list-item">Changes to props trigger a re-render of the child component, while changes to state trigger a re-render of the component itself.</div>
+                
+                <h2 class="section-subtitle">State in Class Components</h2>
+                <p class="section-paragraph">
+                    In class components, state is initialized in the constructor and accessed via this.state:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">State in Class Component</div>
+                    <pre><span class="keyword">class</span> <span class="function">Counter</span> <span class="keyword">extends</span> React.<span class="function">Component</span> {
+  <span class="function">constructor</span>(props) {
+    <span class="keyword">super</span>(props);
+    <span class="keyword">this</span>.state = {
+      count: 0
+    };
+  }
+
+  <span class="function">render</span>() {
+    <span class="keyword">return</span> (
+      <span class="tag">&lt;div&gt;</span>
+        <span class="tag">&lt;p&gt;</span>You clicked {<span class="keyword">this</span>.state.count} times<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;button</span> <span class="attr">onClick</span>={() => <span class="keyword">this</span>.setState({ count: <span class="keyword">this</span>.state.count + 1 })}>
+          Click me
+        <span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;/div&gt;</span>
+    );
+  }
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Updating State</h2>
+                <p class="section-paragraph">
+                    In class components, you should never modify state directly. Instead, use the setState() method:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Incorrect Way to Update State</div>
+                    <pre><span class="comment">// Wrong</span>
+<span class="keyword">this</span>.state.count = <span class="keyword">this</span>.state.count + 1;</pre>
+                </div>
+                
+                <div class="code-block">
+                    <div class="code-title">Correct Way to Update State</div>
+                    <pre><span class="comment">// Correct</span>
+<span class="keyword">this</span>.<span class="function">setState</span>({ count: <span class="keyword">this</span>.state.count + 1 });</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    When you call setState(), React merges the object you provide into the current state. This is different from class components in other frameworks, which might require you to manually merge state objects.
+                </p>
+                
+                <h2 class="section-subtitle">State Updates May Be Asynchronous</h2>
+                <p class="section-paragraph">
+                    React may batch multiple setState() calls into a single update for performance. Because this.props and this.state may be updated asynchronously, you should not rely on their values for calculating the next state.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Incorrect Way to Update State Based on Previous State</div>
+                    <pre><span class="comment">// Wrong</span>
+<span class="keyword">this</span>.<span class="function">setState</span>({
+  counter: <span class="keyword">this</span>.state.counter + <span class="keyword">this</span>.props.increment,
+});</pre>
+                </div>
+                
+                <div class="code-block">
+                    <div class="code-title">Correct Way to Update State Based on Previous State</div>
+                    <pre><span class="comment">// Correct</span>
+<span class="keyword">this</span>.<span class="function">setState</span>((state, props) => ({
+  counter: state.counter + props.increment
+}));</pre>
+                </div>
+                
+                <h2 class="section-subtitle">State in Functional Components (Hooks)</h2>
+                <p class="section-paragraph">
+                    In functional components, we use the useState hook to manage state:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">State in Functional Component</div>
+                    <pre><span class="keyword">import</span> React, { useState } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">function</span> <span class="function">Counter</span>() {
+  <span class="comment">// Declare a new state variable, which we'll call "count"</span>
+  <span class="keyword">const</span> [count, setCount] = <span class="function">useState</span>(0);
+
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+      <span class="tag">&lt;p&gt;</span>You clicked {count} times<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">onClick</span>={() => <span class="function">setCount</span>(count + 1)}>
+        Click me
+      <span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    The useState hook returns an array with two elements: the current state value and a function to update it. We use array destructuring to assign these to variables.
+                </p>
+                
+                <h2 class="section-subtitle">Multiple State Variables</h2>
+                <p class="section-paragraph">
+                    You can use the State Hook more than once in a single component:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Multiple State Variables</div>
+                    <pre><span class="keyword">function</span> <span class="function">ExampleWithManyStates</span>() {
+  <span class="comment">// Declare multiple state variables</span>
+  <span class="keyword">const</span> [age, setAge] = <span class="function">useState</span>(42);
+  <span class="keyword">const</span> [fruit, setFruit] = <span class="function">useState</span>(<span class="string">'banana'</span>);
+  <span class="keyword">const</span> [todos, setTodos] = <span class="function">useState</span>([{ text: <span class="string">'Learn Hooks'</span> }]);
+
+  <span class="comment">// ...</span>
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Lifting State Up</h2>
+                <p class="section-paragraph">
+                    Often, several components need to reflect the same changing data. We recommend lifting the shared state up to their closest common ancestor. Let's see how this works in practice:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Lifting State Up</div>
+                    <pre><span class="keyword">function</span> <span class="function">BoilingVerdict</span>(props) {
+  <span class="keyword">if</span> (props.celsius >= 100) {
+    <span class="keyword">return</span> <span class="tag">&lt;p&gt;</span>The water would boil.<span class="tag">&lt;/p&gt;</span>;
+  }
+  <span class="keyword">return</span> <span class="tag">&lt;p&gt;</span>The water would not boil.<span class="tag">&lt;/p&gt;</span>;
+}
+
+<span class="keyword">class</span> <span class="function">Calculator</span> <span class="keyword">extends</span> React.<span class="function">Component</span> {
+  <span class="function">constructor</span>(props) {
+    <span class="keyword">super</span>(props);
+    <span class="keyword">this</span>.<span class="function">handleCelsiusChange</span> = <span class="keyword">this</span>.handleCelsiusChange.<span class="function">bind</span>(<span class="keyword">this</span>);
+    <span class="keyword">this</span>.<span class="function">handleFahrenheitChange</span> = <span class="keyword">this</span>.handleFahrenheitChange.<span class="function">bind</span>(<span class="keyword">this</span>);
+    <span class="keyword">this</span>.state = {temperature: <span class="string">''</span>, scale: <span class="string">'c'</span>};
+  }
+
+  <span class="function">handleCelsiusChange</span>(temperature) {
+    <span class="keyword">this</span>.<span class="function">setState</span>({scale: <span class="string">'c'</span>, temperature});
+  }
+
+  <span class="function">handleFahrenheitChange</span>(temperature) {
+    <span class="keyword">this</span>.<span class="function">setState</span>({scale: <span class="string">'f'</span>, temperature});
+  }
+
+  <span class="function">render</span>() {
+    <span class="keyword">const</span> scale = <span class="keyword">this</span>.state.scale;
+    <span class="keyword">const</span> temperature = <span class="keyword">this</span>.state.temperature;
+    <span class="keyword">const</span> celsius = scale === <span class="string">'f'</span> ? <span class="function">tryConvert</span>(temperature, toCelsius) : temperature;
+    <span class="keyword">const</span> fahrenheit = scale === <span class="string">'c'</span> ? <span class="function">tryConvert</span>(temperature, toFahrenheit) : temperature;
+
+    <span class="keyword">return</span> (
+      <span class="tag">&lt;div&gt;</span>
+        <span class="tag">&lt;TemperatureInput</span>
+          <span class="attr">scale</span>=<span class="string">"c"</span>
+          <span class="attr">temperature</span>={celsius}
+          <span class="attr">onTemperatureChange</span>={<span class="keyword">this</span>.handleCelsiusChange} <span class="tag">/&gt;</span>
+        <span class="tag">&lt;TemperatureInput</span>
+          <span class="attr">scale</span>=<span class="string">"f"</span>
+          <span class="attr">temperature</span>={fahrenheit}
+          <span class="attr">onTemperatureChange</span>={<span class="keyword">this</span>.handleFahrenheitChange} <span class="tag">/&gt;</span>
+        <span class="tag">&lt;BoilingVerdict</span>
+          <span class="attr">celsius</span>={<span class="function">parseFloat</span>(celsius)} <span class="tag">/&gt;</span>
+      <span class="tag">&lt;/div&gt;</span>
+    );
+  }
+}</pre>
+                </div>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>When you update state, React re-renders the component and its children. This is why state is so powerful in React - it allows you to create dynamic, interactive user interfaces.</p>
+                </div>
+            </section>
+
+            <!-- Lifecycle Section -->
+            <section class="content-section" id="lifecycle">
+                <h1 class="section-title">Component Lifecycle</h1>
+                <p class="section-paragraph">
+                    Each component in React has a lifecycle which you can monitor and manipulate during its three main phases. The three phases are: Mounting, Updating, and Unmounting.
+                </p>
+                
+                <h2 class="section-subtitle">Lifecycle Methods in Class Components</h2>
+                <p class="section-paragraph">
+                    Class components have several lifecycle methods that you can override to run code at particular times in the component's life:
+                </p>
+                
+                <h3 class="section-subtitle">Mounting</h3>
+                <p class="section-paragraph">
+                    Mounting refers to the process of creating a component and inserting it into the DOM. The following methods are called in order when an instance of a component is being created and inserted into the DOM:
+                </p>
+                
+                <div class="list-item"><strong>constructor()</strong> - Called before the component is mounted. The constructor for a React component is called before it is mounted. When implementing the constructor for a React.Component subclass, you should call super(props) before any other statement.</div>
+                <div class="list-item"><strong>static getDerivedStateFromProps()</strong> - Invoked right before calling the render method, both on the initial mount and on subsequent updates. It should return an object to update the state, or null to update nothing.</div>
+                <div class="list-item"><strong>render()</strong> - The only required method in a class component. It examines this.props and this.state and returns one of the following types: React elements, Arrays and fragments, Portals, String and numbers, Booleans or null.</div>
+                <div class="list-item"><strong>componentDidMount()</strong> - Invoked immediately after a component is mounted (inserted into the tree). Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request.</div>
+                
+                <h3 class="section-subtitle">Updating</h3>
+                <p class="section-paragraph">
+                    An update can be caused by changes to props or state. The following methods are called when a component is being re-rendered:
+                </p>
+                
+                <div class="list-item"><strong>static getDerivedStateFromProps()</strong> - Invoked right before calling the render method, both on the initial mount and on subsequent updates.</div>
+                <div class="list-item"><strong>shouldComponentUpdate()</strong> - Invoked before rendering when new props or state are being received. Defaults to true. This method is not called for the initial render or when forceUpdate() is used.</div>
+                <div class="list-item"><strong>render()</strong> - The only required method in a class component.</div>
+                <div class="list-item"><strong>getSnapshotBeforeUpdate()</strong> - Invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture some information from the DOM (e.g. scroll position) before it is potentially changed.</div>
+                <div class="list-item"><strong>componentDidUpdate()</strong> - Invoked immediately after updating occurs. This method is not called for the initial render. You can use it to operate on the DOM when the component has been updated.</div>
+                
+                <h3 class="section-subtitle">Unmounting</h3>
+                <p class="section-paragraph">
+                    This method is called when a component is being removed from the DOM:
+                </p>
+                
+                <div class="list-item"><strong>componentWillUnmount()</strong> - Invoked immediately before a component is unmounted and destroyed. Perform any necessary cleanup in this method, such as invalidating timers, canceling network requests, or cleaning up any subscriptions that were created in componentDidMount().</div>
+                
+                <h2 class="section-subtitle">Lifecycle Methods Example</h2>
+                <div class="code-block">
+                    <div class="code-title">Lifecycle Methods Example</div>
+                    <pre><span class="keyword">class</span> <span class="function">LifecycleExample</span> <span class="keyword">extends</span> React.<span class="function">Component</span> {
+  <span class="function">constructor</span>(props) {
+    <span class="keyword">super</span>(props);
+    <span class="keyword">this</span>.state = {count: 0};
+    <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'Constructor: Component is being constructed'</span>);
+  }
+
+  <span class="keyword">static</span> <span class="function">getDerivedStateFromProps</span>(props, state) {
+    <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'getDerivedStateFromProps: Component is about to receive new props'</span>);
+    <span class="keyword">return</span> <span class="keyword">null</span>;
+  }
+
+  <span class="function">componentDidMount</span>() {
+    <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'componentDidMount: Component has been mounted to the DOM'</span>);
+  }
+
+  <span class="function">shouldComponentUpdate</span>(nextProps, nextState) {
+    <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'shouldComponentUpdate: Should component update?'</span>);
+    <span class="keyword">return</span> <span class="keyword">true</span>;
+  }
+
+  <span class="function">getSnapshotBeforeUpdate</span>(prevProps, prevState) {
+    <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'getSnapshotBeforeUpdate: Before updating the DOM'</span>);
+    <span class="keyword">return</span> <span class="keyword">null</span>;
+  }
+
+  <span class="function">componentDidUpdate</span>(prevProps, prevState, snapshot) {
+    <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'componentDidUpdate: Component has been updated'</span>);
+  }
+
+  <span class="function">componentWillUnmount</span>() {
+    <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'componentWillUnmount: Component is about to be unmounted'</span>);
+  }
+
+  <span class="function">render</span>() {
+    <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'render: Component is rendering'</span>);
+    <span class="keyword">return</span> (
+      <span class="tag">&lt;div&gt;</span>
+        <span class="tag">&lt;h2&gt;</span>Lifecycle Methods Example<span class="tag">&lt;/h2&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Count: {<span class="keyword">this</span>.state.count}<span class="tag">&lt;/p&gt;</span>
+        <span class="tag">&lt;button</span> <span class="attr">onClick</span>={() => <span class="keyword">this</span>.setState({ count: <span class="keyword">this</span>.state.count + 1 })}>
+          Increment
+        <span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;/div&gt;</span>
+    );
+  }
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Lifecycle Methods in Functional Components (Hooks)</h2>
+                <p class="section-paragraph">
+                    In functional components, we use hooks to replicate the behavior of lifecycle methods:
+                </p>
+                
+                <div class="list-item"><strong>useEffect</strong> - This hook combines the functionality of componentDidMount, componentDidUpdate, and componentWillUnmount.</div>
+                <div class="list-item"><strong>useLayoutEffect</strong> - This is similar to useEffect, but it fires synchronously after all DOM mutations. Use this to read layout from the DOM and synchronously re-render.</div>
+                
+                <div class="code-block">
+                    <div class="code-title">Lifecycle Methods with Hooks</div>
+                    <pre><span class="keyword">import</span> React, { useState, useEffect } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">function</span> <span class="function">LifecycleWithHooks</span>() {
+  <span class="keyword">const</span> [count, setCount] = <span class="function">useState</span>(0);
+
+  <span class="comment">// componentDidMount and componentDidUpdate</span>
+  <span class="function">useEffect</span>(() => {
+    <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'Component has mounted or updated'</span>);
+    
+    <span class="comment">// This is like componentWillUnmount</span>
+    <span class="keyword">return</span> () => {
+      <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'Component will unmount'</span>);
+    };
+  }, [count]); <span class="comment">// Only re-run the effect if count changes</span>
+
+  <span class="comment">// componentDidMount only</span>
+  <span class="function">useEffect</span>(() => {
+    <span class="keyword">console</span>.<span class="function">log</span>(<span class="string">'Component has mounted'</span>);
+  }, []); <span class="comment">// Empty dependency array means this effect runs once on mount</span>
+
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+      <span class="tag">&lt;h2&gt;</span>Lifecycle with Hooks<span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;p&gt;</span>Count: {count}<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">onClick</span>={() => <span class="function">setCount</span>(count + 1)}>
+        Increment
+      <span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Legacy Lifecycle Methods</h2>
+                <p class="section-paragraph">
+                    Before React 16.3, there were several lifecycle methods that are now considered unsafe and have been renamed with the UNSAFE_ prefix:
+                </p>
+                
+                <div class="list-item"><strong>UNSAFE_componentWillMount()</strong> - Invoked just before mounting. This method is called before render(), therefore setting state in this method will not trigger a re-render.</div>
+                <div class="list-item"><strong>UNSAFE_componentWillReceiveProps()</strong> - Invoked before a mounted component receives new props. Use this as an opportunity to react to a prop transition before render() is called by updating the state using this.setState().</div>
+                <div class="list-item"><strong>UNSAFE_componentWillUpdate()</strong> - Invoked just before rendering when new props or state are being received. Use this as an opportunity to perform preparation before an update occurs.</div>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>The lifecycle methods are a powerful feature of React, but they can be tricky to use correctly. Be careful when using them, and make sure you understand when each method is called and what you can and cannot do in each method.</p>
+                </div>
+            </section>
+
+            <!-- Hooks Section -->
+            <section class="content-section" id="hooks">
+                <h1 class="section-title">Hooks</h1>
+                <p class="section-paragraph">
+                    Hooks are a new addition in React 16.8 that let you use state and other React features without writing a class. They were introduced to solve a wide range of seemingly unconnected problems in React that we've encountered over five years of writing and maintaining tens of thousands of components.
+                </p>
+                
+                <h2 class="section-subtitle">Why Hooks?</h2>
+                <p class="section-paragraph">
+                    Hooks solve several problems:
+                </p>
+                
+                <div class="list-item">It's hard to reuse stateful logic between components - Hooks allow you to reuse stateful logic without changing your component hierarchy.</div>
+                <div class="list-item">Complex components become hard to understand - Hooks let you split one component into smaller functions based on related pieces of logic.</div>
+                <div class="list-item">Classes confuse both people and machines - Hooks provide a more direct API to the React concepts you already know: props, state, context, refs, and lifecycle.</div>
+                
+                <h2 class="section-subtitle">Rules of Hooks</h2>
+                <p class="section-paragraph">
+                    Hooks are JavaScript functions, but they impose two additional rules:
+                </p>
+                
+                <div class="list-item">Only Call Hooks at the Top Level - Don't call Hooks inside loops, conditions, or nested functions. Instead, always use Hooks at the top level of your React function.</div>
+                <div class="list-item">Only Call Hooks from React Functions - Don't call Hooks from regular JavaScript functions. Instead, you can call Hooks from React function components or from custom Hooks.</div>
+                
+                <h2 class="section-subtitle">Basic Hooks</h2>
+                
+                <h3 class="section-subtitle">useState</h3>
+                <p class="section-paragraph">
+                    The useState hook lets you add state to functional components:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">useState Hook</div>
+                    <pre><span class="keyword">import</span> React, { useState } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">function</span> <span class="function">Counter</span>() {
+  <span class="comment">// Declare a new state variable, which we'll call "count"</span>
+  <span class="keyword">const</span> [count, setCount] = <span class="function">useState</span>(0);
+
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+      <span class="tag">&lt;p&gt;</span>You clicked {count} times<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">onClick</span>={() => <span class="function">setCount</span>(count + 1)}>
+        Click me
+      <span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h3 class="section-subtitle">useEffect</h3>
+                <p class="section-paragraph">
+                    The useEffect hook lets you perform side effects in functional components. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes, but unified into a single API.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">useEffect Hook</div>
+                    <pre><span class="keyword">import</span> React, { useState, useEffect } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">function</span> <span class="function">Example</span>() {
+  <span class="keyword">const</span> [count, setCount] = <span class="function">useState</span>(0);
+
+  <span class="comment">// Similar to componentDidMount and componentDidUpdate:</span>
+  <span class="function">useEffect</span>(() => {
+    <span class="comment">// Update the document title using the browser API</span>
+    document.title = <span class="string">`You clicked </span>${count}<span class="string"> times`</span>;
+  });
+
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+      <span class="tag">&lt;p&gt;</span>You clicked {count} times<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">onClick</span>={() => <span class="function">setCount</span>(count + 1)}>
+        Click me
+      <span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    By default, useEffect runs after every render. You can control when it runs by providing a dependency array as the second argument:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">useEffect with Dependencies</div>
+                    <pre><span class="comment">// Only runs on mount (componentDidMount)</span>
+<span class="function">useEffect</span>(() => {
+  <span class="comment">// Code here</span>
+}, []);
+
+<span class="comment">// Runs on mount and when count changes</span>
+<span class="function">useEffect</span>(() => {
+  <span class="comment">// Code here</span>
+}, [count]);
+
+<span class="comment">// Runs on mount and when count or name changes</span>
+<span class="function">useEffect</span>(() => {
+  <span class="comment">// Code here</span>
+}, [count, name]);</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    You can also return a cleanup function from useEffect, which will be run before the component is unmounted:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">useEffect with Cleanup</div>
+                    <pre><span class="function">useEffect</span>(() => {
+  <span class="keyword">const</span> <span class="function">timerID</span> = <span class="function">setInterval</span>(() => {
+    <span class="function">setCount</span>(prevCount => prevCount + 1);
+  }, 1000);
+
+  <span class="keyword">return</span> () => {
+    <span class="function">clearInterval</span>(timerID);
+  };
+}, []);</pre>
+                </div>
+                
+                <h3 class="section-subtitle">useContext</h3>
+                <p class="section-paragraph">
+                    The useContext hook accepts a context object (the value returned from React.createContext) and returns the current context value for that context.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">useContext Hook</div>
+                    <pre><span class="keyword">import</span> React, { createContext, useContext } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">const</span> <span class="function">ThemeContext</span> = <span class="function">createContext</span>(<span class="string">'light'</span>);
+
+<span class="keyword">function</span> <span class="function">ThemedButton</span>() {
+  <span class="keyword">const</span> <span class="function">theme</span> = <span class="function">useContext</span>(ThemeContext);
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;button</span> <span class="attr">style</span>={{ background: theme === <span class="string">'dark'</span> ? <span class="string">'#333'</span> : <span class="string">'#FFF'</span> }}>
+      I am styled by theme context!
+    <span class="tag">&lt;/button&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Additional Hooks</h2>
+                
+                <h3 class="section-subtitle">useReducer</h3>
+                <p class="section-paragraph">
+                    The useReducer hook is an alternative to useState. It's usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">useReducer Hook</div>
+                    <pre><span class="keyword">const</span> <span class="function">initialState</span> = { count: 0 };
+
+<span class="keyword">function</span> <span class="function">reducer</span>(state, action) {
+  <span class="keyword">switch</span> (action.type) {
+    <span class="keyword">case</span> <span class="string">'increment'</span>:
+      <span class="keyword">return</span> { count: state.count + 1 };
+    <span class="keyword">case</span> <span class="string">'decrement'</span>:
+      <span class="keyword">return</span> { count: state.count - 1 };
+    <span class="keyword">default</span>:
+      <span class="keyword">throw</span> <span class="keyword">new</span> <span class="function">Error</span>();
+  }
+}
+
+<span class="keyword">function</span> <span class="function">Counter</span>() {
+  <span class="keyword">const</span> [state, dispatch] = <span class="function">useReducer</span>(reducer, initialState);
+
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;&gt;</span>
+      Count: {state.count}
+      <span class="tag">&lt;button</span> <span class="attr">onClick</span>={() => <span class="function">dispatch</span>({ type: <span class="string">'decrement'</span> })}>-<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">onClick</span>={() => <span class="function">dispatch</span>({ type: <span class="string">'increment'</span> })}>+<span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;/&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h3 class="section-subtitle">useCallback</h3>
+                <p class="section-paragraph">
+                    The useCallback hook returns a memoized version of the callback function that only changes if one of the dependencies has changed. This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">useCallback Hook</div>
+                    <pre><span class="keyword">const</span> <span class="function">memoizedCallback</span> = <span class="function">useCallback</span>(
+  () => {
+    <span class="function">doSomething</span>(a, b);
+  },
+  [a, b]
+);</pre>
+                </div>
+                
+                <h3 class="section-subtitle">useMemo</h3>
+                <p class="section-paragraph">
+                    The useMemo hook returns a memoized value. This is useful for expensive calculations that you don't want to re-run on every render.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">useMemo Hook</div>
+                    <pre><span class="keyword">const</span> <span class="function">memoizedValue</span> = <span class="function">useMemo</span>(() => <span class="function">computeExpensiveValue</span>(a, b), [a, b]);</pre>
+                </div>
+                
+                <h3 class="section-subtitle">useRef</h3>
+                <p class="section-paragraph">
+                    The useRef hook returns a mutable ref object whose .current property is initialized to the passed argument. The returned object will persist for the full lifetime of the component.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">useRef Hook</div>
+                    <pre><span class="keyword">function</span> <span class="function">TextInputWithFocusButton</span>() {
+  <span class="keyword">const</span> <span class="function">inputEl</span> = <span class="function">useRef</span>(<span class="keyword">null</span>);
+  <span class="keyword">const</span> <span class="function">onButtonClick</span> = () => {
+    <span class="comment">// `current` points to the mounted text input element</span>
+    inputEl.current.<span class="function">focus</span>();
+  };
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;&gt;</span>
+      <span class="tag">&lt;input</span> <span class="attr">ref</span>={inputEl} <span class="attr">type</span>=<span class="string">"text"</span> <span class="tag">/&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">onClick</span>={onButtonClick}>Focus the input<span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;/&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Custom Hooks</h2>
+                <p class="section-paragraph">
+                    A custom Hook is a JavaScript function whose name starts with "use" and that can call other Hooks. Custom Hooks are a mechanism to reuse stateful logic between components.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Custom Hook Example</div>
+                    <pre><span class="keyword">import</span> { useState, useEffect } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">function</span> <span class="function">useDocumentTitle</span>(title) {
+  <span class="function">useEffect</span>(() => {
+    document.title = title;
+    <span class="keyword">return</span> () => {
+      <span class="comment">// Clean up: reset title when component unmounts</span>
+      document.title = <span class="string">'React App'</span>;
+    };
+  }, [title]);
+}
+
+<span class="keyword">function</span> <span class="function">MyComponent</span>() {
+  <span class="keyword">const</span> [count, setCount] = <span class="function">useState</span>(0);
+  
+  <span class="function">useDocumentTitle</span>(<span class="string">`You clicked </span>${count}<span class="string"> times`</span>);
+  
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+      <span class="tag">&lt;p&gt;</span>You clicked {count} times<span class="tag">&lt;/p&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">onClick</span>={() => <span class="function">setCount</span>(count + 1)}>
+        Click me
+      <span class="tag">&lt;/button&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>Hooks are a powerful feature of React that can make your code more reusable and easier to understand. However, they come with their own set of rules and best practices. Make sure you understand the rules of Hooks before using them in your application.</p>
+                </div>
+            </section>
+
+            <!-- Context API Section -->
+            <section class="content-section" id="context">
+                <h1 class="section-title">Context API</h1>
+                <p class="section-paragraph">
+                    Context provides a way to pass data through the component tree without having to pass props down manually at every level. It's designed to share data that can be considered "global" for a tree of React components, such as the current authenticated user, theme, or preferred language.
+                </p>
+                
+                <h2 class="section-subtitle">When to Use Context</h2>
+                <p class="section-paragraph">
+                    Context is primarily used when some data needs to be accessible by many components at different nesting levels. Apply it sparingly because it makes component reuse more difficult.
+                </p>
+                
+                <div class="list-item">Theme (light/dark mode)</div>
+                <div class="list-item">User authentication status</div>
+                <div class="list-item">Language preference</div>
+                <div class="list-item">Application settings</div>
+                
+                <h2 class="section-subtitle">Creating a Context</h2>
+                <p class="section-paragraph">
+                    A context is created using React.createContext():
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Creating a Context</div>
+                    <pre><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="comment">// Create a context with a default value</span>
+<span class="keyword">const</span> <span class="function">ThemeContext</span> = React.<span class="function">createContext</span>(<span class="string">'light'</span>);
+
+<span class="comment">// Create another context</span>
+<span class="keyword">const</span> <span class="function">UserContext</span> = React.<span class="function">createContext</span>({
+  name: <span class="string">'Guest'</span>,
+});</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Context Provider</h2>
+                <p class="section-paragraph">
+                    The Context.Provider component allows consuming components to subscribe to context changes. It accepts a value prop to be passed to consuming components that are descendants of this Provider.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Context Provider</div>
+                    <pre><span class="keyword">function</span> <span class="function">App</span>() {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;ThemeContext.Provider</span> <span class="attr">value</span>=<span class="string">"dark"</span><span class="tag">&gt;</span>
+      <span class="tag">&lt;UserContext.Provider</span> <span class="attr">value</span>={{name: <span class="string">'John Doe'</span>}}<span class="tag">&gt;</span>
+        <span class="tag">&lt;Toolbar</span> <span class="tag">/&gt;</span>
+      <span class="tag">&lt;/UserContext.Provider&gt;</span>
+    <span class="tag">&lt;/ThemeContext.Provider&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Consuming Context</h2>
+                <p class="section-paragraph">
+                    There are several ways to consume context in React:
+                </p>
+                
+                <h3 class="section-subtitle">Using the useContext Hook</h3>
+                <p class="section-paragraph">
+                    The useContext hook is the simplest way to consume context in functional components:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Using useContext Hook</div>
+                    <pre><span class="keyword">import</span> React, { useContext } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">function</span> <span class="function">ThemedButton</span>() {
+  <span class="keyword">const</span> <span class="function">theme</span> = <span class="function">useContext</span>(ThemeContext);
+  <span class="keyword">const</span> <span class="function">user</span> = <span class="function">useContext</span>(UserContext);
+  
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;button</span> <span class="attr">style</span>={{ 
+      background: theme === <span class="string">'dark'</span> ? <span class="string">'#333'</span> : <span class="string">'#FFF'</span>,
+      color: theme === <span class="string">'dark'</span> ? <span class="string">'#FFF'</span> : <span class="string">'#333'</span>
+    }}>
+      Hello, {user.name}
+    <span class="tag">&lt;/button&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Using Context.Consumer</h3>
+                <p class="section-paragraph">
+                    Before hooks were introduced, the Context.Consumer component was used to consume context:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Using Context.Consumer</div>
+                    <pre><span class="keyword">function</span> <span class="function">ThemedButton</span>() {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;ThemeContext.Consumer&gt;</span>
+      {theme => (
+        <span class="tag">&lt;UserContext.Consumer&gt;</span>
+          {user => (
+            <span class="tag">&lt;button</span> <span class="attr">style</span>={{ 
+              background: theme === <span class="string">'dark'</span> ? <span class="string">'#333'</span> : <span class="string">'#FFF'</span>,
+              color: theme === <span class="string">'dark'</span> ? <span class="string">'#FFF'</span> : <span class="string">'#333'</span>
+            }}>
+              Hello, {user.name}
+            <span class="tag">&lt;/button&gt;</span>
+          )}
+        <span class="tag">&lt;/UserContext.Consumer&gt;</span>
+      )}
+    <span class="tag">&lt;/ThemeContext.Consumer&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Using Class Components</h3>
+                <p class="section-paragraph">
+                    In class components, you can consume context using the contextType property or the Context.Consumer component:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Using contextType in Class Components</div>
+                    <pre><span class="keyword">class</span> <span class="function">ThemedButton</span> <span class="keyword">extends</span> React.<span class="function">Component</span> {
+  <span class="keyword">static</span> contextType = ThemeContext;
+  
+  <span class="function">render</span>() {
+    <span class="keyword">const</span> <span class="function">theme</span> = <span class="keyword">this</span>.context;
+    <span class="keyword">return</span> (
+      <span class="tag">&lt;button</span> <span class="attr">style</span>={{ 
+        background: theme === <span class="string">'dark'</span> ? <span class="string">'#333'</span> : <span class="string">'#FFF'</span>,
+        color: theme === <span class="string">'dark'</span> ? <span class="string">'#FFF'</span> : <span class="string">'#333'</span>
+      }}>
+        Themed Button
+      <span class="tag">&lt;/button&gt;</span>
+    );
+  }
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Updating Context</h2>
+                <p class="section-paragraph">
+                    To update context, you need to combine it with state. The provider component can manage the state and pass it down through context:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Updating Context</div>
+                    <pre><span class="keyword">import</span> React, { useState } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="comment">// Create context</span>
+<span class="keyword">const</span> <span class="function">ThemeContext</span> = React.<span class="function">createContext</span>();
+
+<span class="keyword">function</span> <span class="function">ThemeProvider</span>({ children }) {
+  <span class="keyword">const</span> [theme, setTheme] = <span class="function">useState</span>(<span class="string">'light'</span>);
+  
+  <span class="keyword">const</span> <span class="function">toggleTheme</span> = () => {
+    <span class="function">setTheme</span>(prevTheme => prevTheme === <span class="string">'light'</span> ? <span class="string">'dark'</span> : <span class="string">'light'</span>);
+  };
+  
+  <span class="keyword">const</span> <span class="function">value</span> = { theme, toggleTheme };
+  
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;ThemeContext.Provider</span> <span class="attr">value</span>={value}<span class="tag">&gt;</span>
+      {children}
+    <span class="tag">&lt;/ThemeContext.Provider&gt;</span>
+  );
+}
+
+<span class="keyword">function</span> <span class="function">ThemedButton</span>() {
+  <span class="keyword">const</span> { theme, toggleTheme } = <span class="function">useContext</span>(ThemeContext);
+  
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;button</span> 
+      <span class="attr">onClick</span>={toggleTheme}
+      <span class="attr">style</span>={{ 
+        background: theme === <span class="string">'dark'</span> ? <span class="string">'#333'</span> : <span class="string">'#FFF'</span>,
+        color: theme === <span class="string">'dark'</span> ? <span class="string">'#FFF'</span> : <span class="string">'#333'</span>
+      }}
+    >
+      Toggle Theme
+    <span class="tag">&lt;/button&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Context and Performance</h2>
+                <p class="section-paragraph">
+                    When a context value changes, all components that consume that context will re-render. To avoid unnecessary re-renders, you can:
+                </p>
+                
+                <div class="list-item">Split contexts that don't change together.</div>
+                <div class="list-item">Memoize context values with useMemo.</div>
+                <div class="list-item">Use React.memo to prevent components from re-rendering when props don't change.</div>
+                
+                <div class="code-block">
+                    <div class="code-title">Optimizing Context Performance</div>
+                    <pre><span class="keyword">import</span> React, { useState, useMemo, useContext } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="comment">// Split contexts</span>
+<span class="keyword">const</span> <span class="function">ThemeContext</span> = React.<span class="function">createContext</span>();
+<span class="keyword">const</span> <span class="function">UserContext</span> = React.<span class="function">createContext</span>();
+
+<span class="keyword">function</span> <span class="function">App</span>() {
+  <span class="keyword">const</span> [theme, setTheme] = <span class="function">useState</span>(<span class="string">'light'</span>);
+  <span class="keyword">const</span> [user, setUser] = <span class="function">useState</span>({ name: <span class="string">'John'</span> });
+  
+  <span class="comment">// Memoize context values</span>
+  <span class="keyword">const</span> <span class="function">themeValue</span> = <span class="function">useMemo</span>(() => ({ theme, setTheme }), [theme]);
+  <span class="keyword">const</span> <span class="function">userValue</span> = <span class="function">useMemo</span>(() => ({ user, setUser }), [user]);
+  
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;ThemeContext.Provider</span> <span class="attr">value</span>={themeValue}<span class="tag">&gt;</span>
+      <span class="tag">&lt;UserContext.Provider</span> <span class="attr">value</span>={userValue}<span class="tag">&gt;</span>
+        <span class="tag">&lt;Dashboard</span> <span class="tag">/&gt;</span>
+      <span class="tag">&lt;/UserContext.Provider&gt;</span>
+    <span class="tag">&lt;/ThemeContext.Provider&gt;</span>
+  );
+}
+
+<span class="comment">// Memoize component to prevent unnecessary re-renders</span>
+<span class="keyword">const</span> <span class="function">UserProfile</span> = React.<span class="function">memo</span>(<span class="keyword">function</span> <span class="function">UserProfile</span>() {
+  <span class="keyword">const</span> { user } = <span class="function">useContext</span>(UserContext);
+  
+  <span class="keyword">return</span> <span class="tag">&lt;div&gt;</span>{user.name}<span class="tag">&lt;/div&gt;</span>;
+});</pre>
+                </div>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>Context is a powerful feature, but it's not a silver bullet. Use it sparingly and only for truly global data. For component-specific state, props and state are usually sufficient.</p>
+                </div>
+            </section>
+
+            <!-- React Router Section -->
+            <section class="content-section" id="router">
+                <h1 class="section-title">React Router</h1>
+                <p class="section-paragraph">
+                    React Router is a standard library for routing in React. It enables navigation between views from different components in a React application, allows changing the browser URL, and keeps the UI in sync with the URL.
+                </p>
+                
+                <h2 class="section-subtitle">Installation</h2>
+                <p class="section-paragraph">
+                    To install React Router, run the following command in your project directory:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Terminal</div>
+                    <pre>npm install react-router-dom</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Basic Routing</h2>
+                <p class="section-paragraph">
+                    Here's a basic example of how to set up routing in a React application:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Basic Routing Example</div>
+                    <pre><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;
+<span class="keyword">import</span> {
+  BrowserRouter <span class="keyword">as</span> Router,
+  Switch,
+  Route,
+  Link
+} <span class="keyword">from</span> <span class="string">'react-router-dom'</span>;
+
+<span class="keyword">function</span> <span class="function">Home</span>() {
+  <span class="keyword">return</span> <span class="tag">&lt;h2&gt;</span>Home<span class="tag">&lt;/h2&gt;</span>;
+}
+
+<span class="keyword">function</span> <span class="function">About</span>() {
+  <span class="keyword">return</span> <span class="tag">&lt;h2&gt;</span>About<span class="tag">&lt;/h2&gt;</span>;
+}
+
+<span class="keyword">function</span> <span class="function">Users</span>() {
+  <span class="keyword">return</span> <span class="tag">&lt;h2&gt;</span>Users<span class="tag">&lt;/h2&gt;</span>;
+}
+
+<span class="keyword">function</span> <span class="function">App</span>() {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;Router&gt;</span>
+      <span class="tag">&lt;div&gt;</span>
+        <span class="tag">&lt;nav&gt;</span>
+          <span class="tag">&lt;ul&gt;</span>
+            <span class="tag">&lt;li&gt;</span>
+              <span class="tag">&lt;Link</span> <span class="attr">to</span>=<span class="string">"/"</span><span class="tag">&gt;</span>Home<span class="tag">&lt;/Link&gt;</span>
+            <span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;li&gt;</span>
+              <span class="tag">&lt;Link</span> <span class="attr">to</span>=<span class="string">"/about"</span><span class="tag">&gt;</span>About<span class="tag">&lt;/Link&gt;</span>
+            <span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;li&gt;</span>
+              <span class="tag">&lt;Link</span> <span class="attr">to</span>=<span class="string">"/users"</span><span class="tag">&gt;</span>Users<span class="tag">&lt;/Link&gt;</span>
+            <span class="tag">&lt;/li&gt;</span>
+          <span class="tag">&lt;/ul&gt;</span>
+        <span class="tag">&lt;/nav&gt;</span>
+
+        <span class="comment">/* A &lt;Switch&gt; looks through its children &lt;Route&gt;s and
+            renders the first one that matches the current URL. */</span>
+        <span class="tag">&lt;Switch&gt;</span>
+          <span class="tag">&lt;Route</span> <span class="attr">path</span>=<span class="string">"/about"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;About</span> <span class="tag">/&gt;</span>
+          <span class="tag">&lt;/Route&gt;</span>
+          <span class="tag">&lt;Route</span> <span class="attr">path</span>=<span class="string">"/users"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;Users</span> <span class="tag">/&gt;</span>
+          <span class="tag">&lt;/Route&gt;</span>
+          <span class="tag">&lt;Route</span> <span class="attr">path</span>=<span class="string">"/"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;Home</span> <span class="tag">/&gt;</span>
+          <span class="tag">&lt;/Route&gt;</span>
+        <span class="tag">&lt;/Switch&gt;</span>
+      <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/Router&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Route Parameters</h2>
+                <p class="section-paragraph">
+                    You can use route parameters to capture values from the URL:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Route Parameters</div>
+                    <pre><span class="keyword">import</span> {
+  BrowserRouter <span class="keyword">as</span> Router,
+  Switch,
+  Route,
+  Link,
+  useParams
+} <span class="keyword">from</span> <span class="string">'react-router-dom'</span>;
+
+<span class="keyword">function</span> <span class="function">User</span>() {
+  <span class="comment">/* We can use the `useParams` hook here to access</span>
+<span class="comment">     the dynamic pieces of the URL. */</span>
+  <span class="keyword">let</span> { id } = <span class="function">useParams</span>();
+
+  <span class="keyword">return</span> <span class="tag">&lt;h3&gt;</span>User ID: {id}<span class="tag">&lt;/h3&gt;</span>;
+}
+
+<span class="keyword">function</span> <span class="function">App</span>() {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;Router&gt;</span>
+      <span class="tag">&lt;div&gt;</span>
+        <span class="tag">&lt;Switch&gt;</span>
+          <span class="tag">&lt;Route</span> <span class="attr">path</span>=<span class="string">"/users/:id"</span><span class="tag">&gt;</span>
+            <span class="tag">&lt;User</span> <span class="tag">/&gt;</span>
+          <span class="tag">&lt;/Route&gt;</span>
+        <span class="tag">&lt;/Switch&gt;</span>
+      <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;/Router&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Nested Routes</h2>
+                <p class="section-paragraph">
+                    React Router allows you to nest routes to create more complex UIs:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Nested Routes</div>
+                    <pre><span class="keyword">import</span> {
+  BrowserRouter <span class="keyword">as</span> Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} <span class="keyword">from</span> <span class="string">'react-router-dom'</span>;
+
+<span class="keyword">function</span> <span class="function">Topic</span>() {
+  <span class="keyword">let</span> { topicId } = <span class="function">useParams</span>();
+  <span class="keyword">return</span> <span class="tag">&lt;h3&gt;</span>Requested topic ID: {topicId}<span class="tag">&lt;/h3&gt;</span>;
+}
+
+<span class="keyword">function</span> <span class="function">Topics</span>() {
+  <span class="keyword">let</span> <span class="function">match</span> = <span class="function">useRouteMatch</span>();
+
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+      <span class="tag">&lt;h2&gt;</span>Topics<span class="tag">&lt;/h2&gt;</span>
+
+      <span class="tag">&lt;ul&gt;</span>
+        <span class="tag">&lt;li&gt;</span>
+          <span class="tag">&lt;Link</span> <span class="attr">to</span>={`${match.url}/components`}>Components<span class="tag">&lt;/Link&gt;</span>
+        <span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;li&gt;</span>
+          <span class="tag">&lt;Link</span> <span class="attr">to</span>={`${match.url}/props-v-state`}>Props v. State<span class="tag">&lt;/Link&gt;</span>
+        <span class="tag">&lt;/li&gt;</span>
+      <span class="tag">&lt;/ul&gt;</span>
+
+      <span class="comment">/* The Topics page has its own &lt;Switch&gt; with more routes</span>
+<span class="comment">          that build on the /topics URL path. You can think of the</span>
+<span class="comment">          2nd &lt;Route&gt; here as an "index" page for all topics, or</span>
+<span class="comment">          the page that is shown when no topic is selected */</span>
+      <span class="tag">&lt;Switch&gt;</span>
+        <span class="tag">&lt;Route</span> <span class="attr">path</span>={`${match.path}/:topicId`}<span class="tag">&gt;</span>
+          <span class="tag">&lt;Topic</span> <span class="tag">/&gt;</span>
+        <span class="tag">&lt;/Route&gt;</span>
+        <span class="tag">&lt;Route</span> <span class="attr">path</span>={match.path}<span class="tag">&gt;</span>
+          <span class="tag">&lt;h3&gt;</span>Please select a topic.<span class="tag">&lt;/h3&gt;</span>
+        <span class="tag">&lt;/Route&gt;</span>
+      <span class="tag">&lt;/Switch&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Navigation</h2>
+                <p class="section-paragraph">
+                    React Router provides several ways to navigate between routes:
+                </p>
+                
+                <h3 class="section-subtitle">Using the Link Component</h3>
+                <p class="section-paragraph">
+                    The Link component is the primary way to navigate around a React Router application:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Link Component</div>
+                    <pre><span class="tag">&lt;Link</span> <span class="attr">to</span>=<span class="string">"/about"</span><span class="tag">&gt;</span>About<span class="tag">&lt;/Link&gt;</span></pre>
+                </div>
+                
+                <h3 class="section-subtitle">Using the useHistory Hook</h3>
+                <p class="section-paragraph">
+                    The useHistory hook gives you access to the history instance that you may use to navigate:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">useHistory Hook</div>
+                    <pre><span class="keyword">import</span> { useHistory } <span class="keyword">from</span> <span class="string">'react-router-dom'</span>;
+
+<span class="keyword">function</span> <span class="function">HomeButton</span>() {
+  <span class="keyword">let</span> <span class="function">history</span> = <span class="function">useHistory</span>();
+
+  <span class="keyword">function</span> <span class="function">handleClick</span>() {
+    <span class="function">history</span>.<span class="function">push</span>(<span class="string">"/home"</span>);
+  }
+
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">onClick</span>={handleClick}>
+      Go home
+    <span class="tag">&lt;/button&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Programmatic Navigation with Redirect</h3>
+                <p class="section-paragraph">
+                    The Redirect component can be used to redirect to another location:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Redirect Component</div>
+                    <pre><span class="keyword">import</span> { Redirect } <span class="keyword">from</span> <span class="string">'react-router-dom'</span>;
+
+<span class="keyword">function</span> <span class="function">ProtectedRoute</span>({ component: Component, ...rest }) {
+  <span class="keyword">const</span> <span class="function">isAuthenticated</span> = <span class="keyword">false</span>; <span class="comment">// Check if user is authenticated</span>
+  
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;Route</span>
+      {...rest}
+      <span class="attr">render</span>={(props) =>
+        isAuthenticated ? (
+          <span class="tag">&lt;Component</span> {...props} <span class="tag">/&gt;</span>
+        ) : (
+          <span class="tag">&lt;Redirect</span> <span class="attr">to</span>={{ pathname: <span class="string">"/login"</span>, state: { from: props.location } }} <span class="tag">/&gt;</span>
+        )
+      }
+    <span class="tag">/&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Query Parameters</h2>
+                <p class="section-paragraph">
+                    You can access query parameters using the useLocation hook:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Query Parameters</div>
+                    <pre><span class="keyword">import</span> { useLocation } <span class="keyword">from</span> <span class="string">'react-router-dom'</span>;
+
+<span class="keyword">function</span> <span class="function">useQuery</span>() {
+  <span class="keyword">return</span> <span class="keyword">new</span> <span class="function">URLSearchParams</span>(<span class="function">useLocation</span>().search);
+}
+
+<span class="keyword">function</span> <span class="function">SearchResults</span>() {
+  <span class="keyword">let</span> <span class="function">query</span> = <span class="function">useQuery</span>();
+  
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+      <span class="tag">&lt;h2&gt;</span>Search Results<span class="tag">&lt;/h2&gt;</span>
+      <span class="tag">&lt;p&gt;</span>Searching for: {query.get(<span class="string">"q"</span>)}<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>React Router is a powerful library for handling routing in React applications. It provides a declarative way to define routes and navigate between them. Make sure to check the official documentation for more advanced features and best practices.</p>
+                </div>
+            </section>
+
+            <!-- Redux Section -->
+            <section class="content-section" id="redux">
+                <h1 class="section-title">Redux</h1>
+                <p class="section-paragraph">
+                    Redux is a predictable state container for JavaScript applications. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.
+                </p>
+                
+                <h2 class="section-subtitle">Why Redux?</h2>
+                <p class="section-paragraph">
+                    While React's built-in state management is sufficient for many applications, Redux can be beneficial when:
+                </p>
+                
+                <div class="list-item">You have large amounts of application state that are needed in many places in the app.</div>
+                <div class="list-item">The app state is updated frequently over time.</div>
+                <div class="list-item">The logic to update that state may be complex.</div>
+                <div class="list-item">The app has a medium or large-sized codebase, and might be worked on by many people.</div>
+                
+                <h2 class="section-subtitle">Core Concepts</h2>
+                
+                <h3 class="section-subtitle">Store</h3>
+                <p class="section-paragraph">
+                    The store is the object that brings actions and reducers together. It holds the application state, allows access to the state via getState(), allows state to be updated via dispatch(action), and registers listeners via subscribe(listener).
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Creating a Store</div>
+                    <pre><span class="keyword">import</span> { createStore } <span class="keyword">from</span> <span class="string">'redux'</span>;
+<span class="keyword">import</span> rootReducer <span class="keyword">from</span> <span class="string">'./reducers'</span>;
+
+<span class="keyword">const</span> <span class="function">store</span> = <span class="function">createStore</span>(rootReducer);</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Actions</h3>
+                <p class="section-paragraph">
+                    Actions are plain JavaScript objects that have a type field. They are the only source of information for the store. You send them to the store using store.dispatch().
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Action Example</div>
+                    <pre><span class="keyword">const</span> <span class="function">addTodoAction</span> = {
+  <span class="attr">type</span>: <span class="string">'todos/todoAdded'</span>,
+  <span class="attr">payload</span>: <span class="string">'Buy milk'</span>
+};
+
+<span class="comment">// Dispatching the action</span>
+store.<span class="function">dispatch</span>(addTodoAction);</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    Action creators are functions that create and return action objects:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Action Creator</div>
+                    <pre><span class="keyword">const</span> <span class="function">addTodo</span> = <span class="keyword">text</span> => {
+  <span class="keyword">return</span> {
+    <span class="attr">type</span>: <span class="string">'todos/todoAdded'</span>,
+    <span class="attr">payload</span>: text
+  };
+};
+
+<span class="comment">// Dispatching the action using the action creator</span>
+store.<span class="function">dispatch</span>(<span class="function">addTodo</span>(<span class="string">'Buy milk'</span>));</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Reducers</h3>
+                <p class="section-paragraph">
+                    Reducers are functions that specify how the application's state changes in response to actions sent to the store. Remember that actions only describe what happened, but don't describe how the application's state changes.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Reducer Example</div>
+                    <pre><span class="keyword">const</span> <span class="function">initialState</span> = [];
+
+<span class="keyword">function</span> <span class="function">todosReducer</span>(state = initialState, action) {
+  <span class="keyword">switch</span> (action.type) {
+    <span class="keyword">case</span> <span class="string">'todos/todoAdded'</span>:
+      <span class="keyword">return</span> [
+        ...state,
+        {
+          <span class="attr">id</span>: <span class="function">Date.now</span>(),
+          <span class="attr">text</span>: action.payload,
+          <span class="attr">completed</span>: <span class="keyword">false</span>
+        }
+      ];
+    <span class="keyword">case</span> <span class="string">'todos/todoToggled'</span>:
+      <span class="keyword">return</span> state.<span class="function">map</span>(todo => {
+        <span class="keyword">if</span> (todo.id !== action.payload) {
+          <span class="keyword">return</span> todo;
+        }
+
+        <span class="keyword">return</span> {
+          ...todo,
+          <span class="attr">completed</span>: !todo.completed
+        };
+      });
+    <span class="keyword">default</span>:
+      <span class="keyword">return</span> state;
+  }
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Redux with React</h2>
+                <p class="section-paragraph">
+                    To use Redux with React, you need to install the react-redux package:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Terminal</div>
+                    <pre>npm install react-redux</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Provider Component</h3>
+                <p class="section-paragraph">
+                    The Provider component makes the Redux store available to any nested components that need to access the Redux store.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Provider Component</div>
+                    <pre><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;
+<span class="keyword">import</span> ReactDOM <span class="keyword">from</span> <span class="string">'react-dom'</span>;
+<span class="keyword">import</span> { Provider } <span class="keyword">from</span> <span class="string">'react-redux'</span>;
+<span class="keyword">import</span> { createStore } <span class="keyword">from</span> <span class="string">'redux'</span>;
+<span class="keyword">import</span> rootReducer <span class="keyword">from</span> <span class="string">'./reducers'</span>;
+<span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App'</span>;
+
+<span class="keyword">const</span> <span class="function">store</span> = <span class="function">createStore</span>(rootReducer);
+
+ReactDOM.<span class="function">render</span>(
+  <span class="tag">&lt;Provider</span> <span class="attr">store</span>={store}<span class="tag">&gt;</span>
+    <span class="tag">&lt;App</span> <span class="tag">/&gt;</span>
+  <span class="tag">&lt;/Provider&gt;</span>,
+  document.<span class="function">getElementById</span>(<span class="string">'root'</span>)
+);</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Connect Function</h3>
+                <p class="section-paragraph">
+                    The connect function connects a React component to the Redux store. It provides its connected component with the pieces of the data it needs from the store, and the functions it can use to dispatch actions to the store.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Connect Function</div>
+                    <pre><span class="keyword">import</span> { connect } <span class="keyword">from</span> <span class="string">'react-redux'</span>;
+
+<span class="keyword">function</span> <span class="function">TodoList</span>({ todos, toggleTodo }) {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+      {todos.<span class="function">map</span>(todo => (
+        <span class="tag">&lt;div</span> <span class="attr">key</span>={todo.id} <span class="attr">onClick</span>={() => <span class="function">toggleTodo</span>(todo.id)}>
+          {todo.text} {todo.completed ? <span class="string">'✓'</span> : <span class="string">''</span>}
+        <span class="tag">&lt;/div&gt;</span>
+      ))}
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}
+
+<span class="keyword">const</span> <span class="function">mapStateToProps</span> = <span class="keyword">state</span> => ({
+  <span class="attr">todos</span>: state.todos
+});
+
+<span class="keyword">const</span> <span class="function">mapDispatchToProps</span> = <span class="keyword">dispatch</span> => ({
+  <span class="function">toggleTodo</span>: <span class="keyword">id</span> => <span class="function">dispatch</span>({ <span class="attr">type</span>: <span class="string">'todos/todoToggled'</span>, <span class="attr">payload</span>: id })
+});
+
+<span class="keyword">export</span> <span class="keyword">default</span> <span class="function">connect</span>(mapStateToProps, mapDispatchToProps)(TodoList);</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Hooks</h3>
+                <p class="section-paragraph">
+                    React Redux also provides a set of hooks as an alternative to connect.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Redux Hooks</div>
+                    <pre><span class="keyword">import</span> { useSelector, useDispatch } <span class="keyword">from</span> <span class="string">'react-redux'</span>;
+
+<span class="keyword">function</span> <span class="function">TodoList</span>() {
+  <span class="keyword">const</span> <span class="function">todos</span> = <span class="function">useSelector</span>(state => state.todos);
+  <span class="keyword">const</span> <span class="function">dispatch</span> = <span class="function">useDispatch</span>();
+
+  <span class="keyword">const</span> <span class="function">toggleTodo</span> = <span class="keyword">id</span> => <span class="function">dispatch</span>({ <span class="attr">type</span>: <span class="string">'todos/todoToggled'</span>, <span class="attr">payload</span>: id });
+
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+      {todos.<span class="function">map</span>(todo => (
+        <span class="tag">&lt;div</span> <span class="attr">key</span>={todo.id} <span class="attr">onClick</span>={() => <span class="function">toggleTodo</span>(todo.id)}>
+          {todo.text} {todo.completed ? <span class="string">'✓'</span> : <span class="string">''</span>}
+        <span class="tag">&lt;/div&gt;</span>
+      ))}
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Redux Toolkit</h2>
+                <p class="section-paragraph">
+                    Redux Toolkit is the official, opinionated, batteries-included toolset for efficient Redux development. It includes utilities to simplify common use cases like store setup, creating reducers, and immutable update logic.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Terminal</div>
+                    <pre>npm install @reduxjs/toolkit</pre>
+                </div>
+                
+                <div class="code-block">
+                    <div class="code-title">Redux Toolkit Example</div>
+                    <pre><span class="keyword">import</span> { createSlice, configureStore } <span class="keyword">from</span> <span class="string">'@reduxjs/toolkit'</span>;
+
+<span class="comment">// Create a slice</span>
+<span class="keyword">const</span> <span class="function">todosSlice</span> = <span class="function">createSlice</span>({
+  <span class="attr">name</span>: <span class="string">'todos'</span>,
+  <span class="attr">initialState</span>: [],
+  <span class="attr">reducers</span>: {
+    <span class="function">addTodo</span>: (state, action) => {
+      state.<span class="function">push</span>({
+        <span class="attr">id</span>: <span class="function">Date.now</span>(),
+        <span class="attr">text</span>: action.payload,
+        <span class="attr">completed</span>: <span class="keyword">false</span>
+      });
+    },
+    <span class="function">toggleTodo</span>: (state, action) => {
+      <span class="keyword">const</span> <span class="function">todo</span> = state.<span class="function">find</span>(todo => todo.id === action.payload);
+      <span class="keyword">if</span> (todo) {
+        todo.completed = !todo.completed;
+      }
+    }
+  }
+});
+
+<span class="comment">// Extract the action creators</span>
+<span class="keyword">const</span> { addTodo, toggleTodo } = todosSlice.actions;
+
+<span class="comment">// Create the store</span>
+<span class="keyword">const</span> <span class="function">store</span> = <span class="function">configureStore</span>({
+  <span class="attr">reducer</span>: {
+    <span class="attr">todos</span>: todosSlice.reducer
+  }
+});
+
+<span class="comment">// Dispatch actions</span>
+store.<span class="function">dispatch</span>(<span class="function">addTodo</span>(<span class="string">'Buy milk'</span>));
+store.<span class="function">dispatch</span>(<span class="function">toggleTodo</span>(store.getState().todos[0].id));</pre>
+                </div>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>Redux is a powerful state management library, but it adds complexity to your application. Before deciding to use Redux, consider if your application really needs it. For many applications, React's built-in state management and the Context API are sufficient.</p>
+                </div>
+            </section>
+
+            <!-- Optimization Section -->
+            <section class="content-section" id="optimization">
+                <h1 class="section-title">Performance Optimization</h1>
+                <p class="section-paragraph">
+                    Performance optimization is crucial for creating fast and responsive React applications. As applications grow in complexity, it's important to identify and address performance bottlenecks to ensure a smooth user experience.
+                </p>
+                
+                <h2 class="section-subtitle">Identifying Performance Issues</h2>
+                <p class="section-paragraph">
+                    Before optimizing, it's important to identify performance issues. React provides several tools for this:
+                </p>
+                
+                <div class="list-item"><strong>React DevTools Profiler</strong> - A tool that helps you visualize how components render and identify performance bottlenecks.</div>
+                <div class="list-item"><strong>Chrome Performance Tab</strong> - A built-in browser tool that provides detailed performance metrics.</div>
+                <div class="list-item"><strong>why-did-you-render</strong> - A library that notifies you in the console when potentially unnecessary re-renders occur.</div>
+                
+                <h2 class="section-subtitle">Common Optimization Techniques</h2>
+                
+                <h3 class="section-subtitle">Using React.memo</h3>
+                <p class="section-paragraph">
+                    React.memo is a higher-order component that memoizes the rendered output of a component. It prevents unnecessary re-renders if the props haven't changed.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">React.memo Example</div>
+                    <pre><span class="keyword">const</span> <span class="function">ExpensiveComponent</span> = React.<span class="function">memo</span>(<span class="keyword">function</span> <span class="function">ExpensiveComponent</span>({ name }) {
+  <span class="comment">// Expensive rendering logic</span>
+  <span class="keyword">return</span> <span class="tag">&lt;div&gt;</span>{name}<span class="tag">&lt;/div&gt;</span>;
+});</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Using useCallback</h3>
+                <p class="section-paragraph">
+                    The useCallback hook returns a memoized version of the callback function that only changes if one of the dependencies has changed. This is useful when passing callbacks to optimized child components.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">useCallback Example</div>
+                    <pre><span class="keyword">function</span> <span class="function">ParentComponent</span>() {
+  <span class="keyword">const</span> [count, setCount] = <span class="function">useState</span>(0);
+  
+  <span class="comment">// Without useCallback, this function would be recreated on every render</span>
+  <span class="keyword">const</span> <span class="function">handleClick</span> = <span class="function">useCallback</span>(() => {
+    <span class="function">console</span>.<span class="function">log</span>(<span class="string">'Button clicked'</span>);
+  }, []); <span class="comment">// Empty dependency array means this function is created only once</span>
+  
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+      <span class="tag">&lt;button</span> <span class="attr">onClick</span>={() => <span class="function">setCount</span>(count + 1)}>Increment: {count}<span class="tag">&lt;/button&gt;</span>
+      <span class="tag">&lt;ExpensiveChildComponent</span> <span class="attr">onClick</span>={handleClick} <span class="tag">/&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Using useMemo</h3>
+                <p class="section-paragraph">
+                    The useMemo hook returns a memoized value. This is useful for expensive calculations that you don't want to re-run on every render.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">useMemo Example</div>
+                    <pre><span class="keyword">function</span> <span class="function">ExpensiveCalculationComponent</span>({ data }) {
+  <span class="comment">// Without useMemo, this calculation would run on every render</span>
+  <span class="keyword">const</span> <span class="function">result</span> = <span class="function">useMemo</span>(() => {
+    <span class="comment">// Expensive calculation based on data</span>
+    <span class="keyword">return</span> data.<span class="function">reduce</span>((acc, item) => acc + item.value, 0);
+  }, [data]); <span class="comment">// Only re-run the calculation if data changes</span>
+  
+  <span class="keyword">return</span> <span class="tag">&lt;div&gt;</span>Result: {result}<span class="tag">&lt;/div&gt;</span>;
+}</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Virtualizing Long Lists</h3>
+                <p class="section-paragraph">
+                    When rendering large lists of data, it's important to only render the items that are currently visible. This technique is called windowing or virtualization.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Terminal</div>
+                    <pre>npm install react-window</pre>
+                </div>
+                
+                <div class="code-block">
+                    <div class="code-title">Virtualized List Example</div>
+                    <pre><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;
+<span class="keyword">import</span> { FixedSizeList <span class="keyword">as</span> List } <span class="keyword">from</span> <span class="string">'react-window'</span>;
+
+<span class="keyword">const</span> <span class="function">Row</span> = ({ index, style }) => (
+  <span class="tag">&lt;div</span> <span class="attr">style</span>={style}>Row {index}<span class="tag">&lt;/div&gt;</span>
+);
+
+<span class="keyword">const</span> <span class="function">Example</span> = () => (
+  <span class="tag">&lt;List</span>
+    <span class="attr">height</span>={600}
+    <span class="attr">itemCount</span>={1000}
+    <span class="attr">itemSize</span>={35}
+    <span class="attr">width</span>={300}
+  <span class="tag">&gt;</span>
+    {Row}
+  <span class="tag">&lt;/List&gt;</span>
+);</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Lazy Loading Components</h3>
+                <p class="section-paragraph">
+                    Lazy loading is a technique that allows you to load components only when they are needed. This can significantly reduce the initial bundle size and improve the loading time of your application.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Lazy Loading Example</div>
+                    <pre><span class="keyword">import</span> React, { Suspense } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="comment">// Lazy load the component</span>
+<span class="keyword">const</span> <span class="function">OtherComponent</span> = React.<span class="function">lazy</span>(() => <span class="keyword">import</span>(<span class="string">'./OtherComponent'</span>));
+
+<span class="keyword">function</span> <span class="function">MyComponent</span>() {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;div&gt;</span>
+      <span class="tag">&lt;Suspense</span> <span class="attr">fallback</span>={<span class="tag">&lt;div&gt;</span>Loading...<span class="tag">&lt;/div&gt;</span>}>
+        <span class="tag">&lt;OtherComponent</span> <span class="tag">/&gt;</span>
+      <span class="tag">&lt;/Suspense&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Code Splitting</h3>
+                <p class="section-paragraph">
+                    Code splitting allows you to split your code into various bundles which can then be loaded on demand or in parallel. This can be used to achieve smaller bundles and control resource load prioritization.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Code Splitting with React.lazy</div>
+                    <pre><span class="keyword">import</span> React, { Suspense } <span class="keyword">from</span> <span class="string">'react'</span>;
+<span class="keyword">import</span> { BrowserRouter <span class="keyword">as</span> Router, Route, Switch } <span class="keyword">from</span> <span class="string">'react-router-dom'</span>;
+
+<span class="keyword">const</span> <span class="function">Home</span> = React.<span class="function">lazy</span>(() => <span class="keyword">import</span>(<span class="string">'./routes/Home'</span>));
+<span class="keyword">const</span> <span class="function">About</span> = React.<span class="function">lazy</span>(() => <span class="keyword">import</span>(<span class="string">'./routes/About'</span>));
+
+<span class="keyword">const</span> <span class="function">App</span> = () => (
+  <span class="tag">&lt;Router&gt;</span>
+    <span class="tag">&lt;Suspense</span> <span class="attr">fallback</span>={<span class="tag">&lt;div&gt;</span>Loading...<span class="tag">&lt;/div&gt;</span>}>
+      <span class="tag">&lt;Switch&gt;</span>
+        <span class="tag">&lt;Route</span> <span class="attr">exact</span> <span class="attr">path</span>=<span class="string">"/"</span> <span class="attr">component</span>={Home} <span class="tag">/&gt;</span>
+        <span class="tag">&lt;Route</span> <span class="attr">path</span>=<span class="string">"/about"</span> <span class="attr">component</span>={About} <span class="tag">/&gt;</span>
+      <span class="tag">&lt;/Switch&gt;</span>
+    <span class="tag">&lt;/Suspense&gt;</span>
+  <span class="tag">&lt;/Router&gt;</span>
+);</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Optimizing Context</h3>
+                <p class="section-paragraph">
+                    When using Context, it's important to avoid unnecessary re-renders. Here are some techniques:
+                </p>
+                
+                <div class="list-item">Split contexts that don't change together.</div>
+                <div class="list-item">Memoize context values with useMemo.</div>
+                <div class="list-item">Use React.memo to prevent components from re-rendering when props don't change.</div>
+                
+                <div class="code-block">
+                    <div class="code-title">Optimizing Context</div>
+                    <pre><span class="keyword">import</span> React, { useState, useMemo, useContext } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="comment">// Split contexts</span>
+<span class="keyword">const</span> <span class="function">ThemeContext</span> = React.<span class="function">createContext</span>();
+<span class="keyword">const</span> <span class="function">UserContext</span> = React.<span class="function">createContext</span>();
+
+<span class="keyword">function</span> <span class="function">App</span>() {
+  <span class="keyword">const</span> [theme, setTheme] = <span class="function">useState</span>(<span class="string">'light'</span>);
+  <span class="keyword">const</span> [user, setUser] = <span class="function">useState</span>({ name: <span class="string">'John'</span> });
+  
+  <span class="comment">// Memoize context values</span>
+  <span class="keyword">const</span> <span class="function">themeValue</span> = <span class="function">useMemo</span>(() => ({ theme, setTheme }), [theme]);
+  <span class="keyword">const</span> <span class="function">userValue</span> = <span class="function">useMemo</span>(() => ({ user, setUser }), [user]);
+  
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;ThemeContext.Provider</span> <span class="attr">value</span>={themeValue}<span class="tag">&gt;</span>
+      <span class="tag">&lt;UserContext.Provider</span> <span class="attr">value</span>={userValue}<span class="tag">&gt;</span>
+        <span class="tag">&lt;Dashboard</span> <span class="tag">/&gt;</span>
+      <span class="tag">&lt;/UserContext.Provider&gt;</span>
+    <span class="tag">&lt;/ThemeContext.Provider&gt;</span>
+  );
+}</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Production Build</h2>
+                <p class="section-paragraph">
+                    Make sure to deploy your application in production mode. This will remove development-only checks and warnings, and minify your JavaScript bundle, resulting in a faster and smaller application.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Terminal</div>
+                    <pre>npm run build</pre>
+                </div>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>Remember the golden rule of optimization: "Premature optimization is the root of all evil." Always measure before optimizing, and focus on the bottlenecks that actually impact your users' experience.</p>
+                </div>
+            </section>
+
+            <!-- Testing Section -->
+            <section class="content-section" id="testing">
+                <h1 class="section-title">Testing</h1>
+                <p class="section-paragraph">
+                    Testing is an essential part of the development process that helps ensure your React application works as expected and prevents regressions when making changes.
+                </p>
+                
+                <h2 class="section-subtitle">Testing Tools</h2>
+                <p class="section-paragraph">
+                    There are several popular tools for testing React applications:
+                </p>
+                
+                <div class="list-item"><strong>Jest</strong> - A JavaScript testing framework that works out of the box for most React projects created with Create React App.</div>
+                <div class="list-item"><strong>React Testing Library</strong> - A library that helps you test React components by focusing on how they are used by users rather than implementation details.</div>
+                <div class="list-item"><strong>Cypress</strong> - An end-to-end testing framework that allows you to test your application in a real browser.</div>
+                
+                <h2 class="section-subtitle">Setting Up Testing</h2>
+                <p class="section-paragraph">
+                    If you're using Create React App, Jest and React Testing Library are already set up for you. If not, you can install them manually:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Terminal</div>
+                    <pre>npm install --save-dev jest @testing-library/react @testing-library/jest-dom</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Writing Tests</h2>
+                
+                <h3 class="section-subtitle">Testing Components</h3>
+                <p class="section-paragraph">
+                    Here's an example of how to test a simple component:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Component</div>
+                    <pre><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">function</span> <span class="function">Button</span>({ onClick, children }) {
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;button</span> <span class="attr">onClick</span>={onClick}<span class="tag">&gt;</span>
+      {children}
+    <span class="tag">&lt;/button&gt;</span>
+  );
+}
+
+<span class="keyword">export</span> <span class="keyword">default</span> Button;</pre>
+                </div>
+                
+                <div class="code-block">
+                    <div class="code-title">Test</div>
+                    <pre><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;
+<span class="keyword">import</span> { render, fireEvent } <span class="keyword">from</span> <span class="string">'@testing-library/react'</span>;
+<span class="keyword">import</span> Button <span class="keyword">from</span> <span class="string">'./Button'</span>;
+
+<span class="function">test</span>(<span class="string">'calls onClick when clicked'</span>, () => {
+  <span class="keyword">const</span> <span class="function">handleClick</span> = <span class="function">jest.fn</span>();
+  <span class="keyword">const</span> { getByText } = <span class="function">render</span>(<span class="tag">&lt;Button</span> <span class="attr">onClick</span>={handleClick}>Click me<span class="tag">&lt;/Button&gt;</span>);
+  
+  <span class="function">fireEvent</span>.<span class="function">click</span>(<span class="function">getByText</span>(<span class="string">'Click me'</span>));
+  
+  <span class="function">expect</span>(handleClick).<span class="function">toHaveBeenCalledTimes</span>(1);
+});</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Testing Async Operations</h3>
+                <p class="section-paragraph">
+                    When testing components that perform asynchronous operations, you need to handle the asynchronous behavior:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Component with Async Operation</div>
+                    <pre><span class="keyword">import</span> React, { useState, useEffect } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">function</span> <span class="function">UserList</span>() {
+  <span class="keyword">const</span> [users, setUsers] = <span class="function">useState</span>([]);
+  <span class="keyword">const</span> [loading, setLoading] = <span class="function">useState</span>(<span class="keyword">true</span>);
+
+  <span class="function">useEffect</span>(() => {
+    <span class="function">fetchUsers</span>()
+      .<span class="function">then</span>(<span class="function">setUsers</span>)
+      .<span class="function">finally</span>(() => <span class="function">setLoading</span>(<span class="keyword">false</span>));
+  }, []);
+
+  <span class="keyword">if</span> (loading) {
+    <span class="keyword">return</span> <span class="tag">&lt;div&gt;</span>Loading...<span class="tag">&lt;/div&gt;</span>;
+  }
+
+  <span class="keyword">return</span> (
+    <span class="tag">&lt;ul&gt;</span>
+      {users.<span class="function">map</span>(user => (
+        <span class="tag">&lt;li</span> <span class="attr">key</span>={user.id}>{user.name}<span class="tag">&lt;/li&gt;</span>
+      ))}
+    <span class="tag">&lt;/ul&gt;</span>
+  );
+}
+
+<span class="comment">// Mock function for demonstration</span>
+<span class="keyword">async</span> <span class="keyword">function</span> <span class="function">fetchUsers</span>() {
+  <span class="keyword">return</span> [
+    { id: 1, name: <span class="string">'John'</span> },
+    { id: 2, name: <span class="string">'Jane'</span> }
+  ];
+}
+
+<span class="keyword">export</span> <span class="keyword">default</span> UserList;</pre>
+                </div>
+                
+                <div class="code-block">
+                    <div class="code-title">Test for Async Operation</div>
+                    <pre><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;
+<span class="keyword">import</span> { render, screen, waitFor } <span class="keyword">from</span> <span class="string">'@testing-library/react'</span>;
+<span class="keyword">import</span> UserList <span class="keyword">from</span> <span class="string">'./UserList'</span>;
+
+<span class="comment">// Mock the fetchUsers function</span>
+<span class="function">jest.mock</span>(<span class="string">'./UserList'</span>, () => ({
+  <span class="function">fetchUsers</span>: <span class="function">jest.fn</span>().<span class="function">mockResolvedValue</span>([
+    { id: 1, name: <span class="string">'John'</span> },
+    { id: 2, name: <span class="string">'Jane'</span> }
+  ])
+}));
+
+<span class="function">test</span>(<span class="string">'displays user list after loading'</span>, <span class="keyword">async</span> () => {
+  <span class="function">render</span>(<span class="tag">&lt;UserList</span> <span class="tag">/&gt;</span>);
+  
+  <span class="comment">// Initially, loading state should be displayed</span>
+  <span class="function">expect</span>(screen.<span class="function">getByText</span>(<span class="string">'Loading...'</span>)).<span class="function">toBeInTheDocument</span>();
+  
+  <span class="comment">// Wait for the users to be displayed</span>
+  <span class="keyword">await</span> <span class="function">waitFor</span>(() => {
+    <span class="function">expect</span>(screen.<span class="function">getByText</span>(<span class="string">'John'</span>)).<span class="function">toBeInTheDocument</span>();
+    <span class="function">expect</span>(screen.<span class="function">getByText</span>(<span class="string">'Jane'</span>)).<span class="function">toBeInTheDocument</span>();
+  });
+});</pre>
+                </div>
+                
+                <h3 class="section-subtitle">Testing Custom Hooks</h3>
+                <p class="section-paragraph">
+                    You can also test custom hooks using the @testing-library/react-hooks library:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Terminal</div>
+                    <pre>npm install --save-dev @testing-library/react-hooks</pre>
+                </div>
+                
+                <div class="code-block">
+                    <div class="code-title">Custom Hook</div>
+                    <pre><span class="keyword">import</span> { useState, useEffect } <span class="keyword">from</span> <span class="string">'react'</span>;
+
+<span class="keyword">function</span> <span class="function">useCounter</span>(initialValue = 0) {
+  <span class="keyword">const</span> [count, setCount] = <span class="function">useState</span>(initialValue);
+
+  <span class="keyword">const</span> <span class="function">increment</span> = () => <span class="function">setCount</span>(c => c + 1);
+  <span class="keyword">const</span> <span class="function">decrement</span> = () => <span class="function">setCount</span>(c => c - 1);
+  <span class="keyword">const</span> <span class="function">reset</span> = () => <span class="function">setCount</span>(initialValue);
+
+  <span class="keyword">return</span> { count, increment, decrement, reset };
+}
+
+<span class="keyword">export</span> <span class="keyword">default</span> useCounter;</pre>
+                </div>
+                
+                <div class="code-block">
+                    <div class="code-title">Test for Custom Hook</div>
+                    <pre><span class="keyword">import</span> { renderHook, act } <span class="keyword">from</span> <span class="string">'@testing-library/react-hooks'</span>;
+<span class="keyword">import</span> useCounter <span class="keyword">from</span> <span class="string">'./useCounter'</span>;
+
+<span class="function">test</span>(<span class="string">'should increment counter'</span>, () => {
+  <span class="keyword">const</span> { result } = <span class="function">renderHook</span>(() => <span class="function">useCounter</span>());
+
+  <span class="function">act</span>(() => {
+    result.current.<span class="function">increment</span>();
+  });
+
+  <span class="function">expect</span>(result.current.count).<span class="function">toBe</span>(1);
+});
+
+<span class="function">test</span>(<span class="string">'should decrement counter'</span>, () => {
+  <span class="keyword">const</span> { result } = <span class="function">renderHook</span>(() => <span class="function">useCounter</span>());
+
+  <span class="function">act</span>(() => {
+    result.current.<span class="function">decrement</span>();
+  });
+
+  <span class="function">expect</span>(result.current.count).<span class="function">toBe</span>(-1);
+});
+
+<span class="function">test</span>(<span class="string">'should reset counter'</span>, () => {
+  <span class="keyword">const</span> { result } = <span class="function">renderHook</span>(() => <span class="function">useCounter</span>(10));
+
+  <span class="function">act</span>(() => {
+    result.current.<span class="function">increment</span>();
+    result.current.<span class="function">increment</span>();
+    result.current.<span class="function">reset</span>();
+  });
+
+  <span class="function">expect</span>(result.current.count).<span class="function">toBe</span>(10);
+});</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Mocking</h2>
+                <p class="section-paragraph">
+                    Mocking is a technique used in testing to replace parts of your system with mock objects. This is useful when you want to isolate the code you're testing from its dependencies.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Mocking a Module</div>
+                    <pre><span class="keyword">import</span> { render, screen } <span class="keyword">from</span> <span class="string">'@testing-library/react'</span>;
+<span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span>;
+<span class="keyword">import</span> UserList <span class="keyword">from</span> <span class="string">'./UserList'</span>;
+
+<span class="comment">// Mock the axios module</span>
+<span class="function">jest.mock</span>(<span class="string">'axios'</span>);
+
+<span class="function">test</span>(<span class="string">'displays user list after loading'</span>, <span class="keyword">async</span> () => {
+  <span class="comment">// Mock the axios.get method to return a specific response</span>
+  axios.get.<span class="function">mockResolvedValue</span>({
+    <span class="attr">data</span>: [
+      { id: 1, name: <span class="string">'John'</span> },
+      { id: 2, name: <span class="string">'Jane'</span> }
+    ]
+  });
+
+  <span class="function">render</span>(<span class="tag">&lt;UserList</span> <span class="tag">/&gt;</span>);
+
+  <span class="comment">// Wait for the users to be displayed</span>
+  <span class="keyword">await</span> <span class="function">waitFor</span>(() => {
+    <span class="function">expect</span>(screen.<span class="function">getByText</span>(<span class="string">'John'</span>)).<span class="function">toBeInTheDocument</span>();
+    <span class="function">expect</span>(screen.<span class="function">getByText</span>(<span class="string">'Jane'</span>)).<span class="function">toBeInTheDocument</span>();
+  });
+});</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Snapshot Testing</h2>
+                <p class="section-paragraph">
+                    Snapshot testing is a feature of Jest that automatically generates a text file containing a serialized representation of your component. This snapshot is committed alongside your code, and when you run the tests, Jest compares the output to the saved snapshot.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Snapshot Test</div>
+                    <pre><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;
+<span class="keyword">import</span> { render } <span class="keyword">from</span> <span class="string">'@testing-library/react'</span>;
+<span class="keyword">import</span> Button <span class="keyword">from</span> <span class="string">'./Button'</span>;
+
+<span class="function">test</span>(<span class="string">'matches snapshot'</span>, () => {
+  <span class="keyword">const</span> { asFragment } = <span class="function">render</span>(<span class="tag">&lt;Button&gt;</span>Click me<span class="tag">&lt;/Button&gt;</span>);
+  <span class="function">expect</span>(asFragment()).<span class="function">toMatchSnapshot</span>();
+});</pre>
+                </div>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>Testing is an investment in the long-term health of your codebase. While it may take some time to write tests initially, they pay off by making your code more reliable and easier to refactor.</p>
+                </div>
+            </section>
+
+            <!-- Deployment Section -->
+            <section class="content-section" id="deployment">
+                <h1 class="section-title">Deployment</h1>
+                <p class="section-paragraph">
+                    Deployment is the process of making your React application available to users. There are several platforms and methods for deploying React applications, each with its own advantages and considerations.
+                </p>
+                
+                <h2 class="section-subtitle">Building for Production</h2>
+                <p class="section-paragraph">
+                    Before deploying your React application, you need to build it for production. This process optimizes your code for performance and creates a production-ready build.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Terminal</div>
+                    <pre>npm run build</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    This command creates a build directory with a production build of your app. Inside the build/static directory, you'll find your JavaScript and CSS files, which are minified and have hashed filenames for caching purposes.
+                </p>
+                
+                <h2 class="section-subtitle">Static Site Hosting</h2>
+                <p class="section-paragraph">
+                    For static React applications (those that don't require server-side rendering), you can deploy to various static site hosting platforms:
+                </p>
+                
+                <h3 class="section-subtitle">Netlify</h3>
+                <p class="section-paragraph">
+                    Netlify is a popular platform for deploying static sites with continuous deployment from Git.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Deploying to Netlify</div>
+                    <pre><span class="comment"># Install the Netlify CLI</span>
+npm install netlify-cli -g
+
+<span class="comment"># Login to your Netlify account</span>
+netlify login
+
+<span class="comment"># Deploy your site</span>
+netlify deploy --prod --dir=build</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    Alternatively, you can connect your Git repository to Netlify and set up automatic deployments:
+                </p>
+                
+                <div class="list-item">Sign up for a Netlify account and connect to your Git provider (GitHub, GitLab, or Bitbucket).</div>
+                <div class="list-item">Select the repository you want to deploy.</div>
+                <div class="list-item">Configure the build settings:
+                    <div class="list-item">Build command: npm run build</div>
+                    <div class="list-item">Publish directory: build</div>
+                </div>
+                <div class="list-item">Deploy your site.</div>
+                
+                <h3 class="section-subtitle">Vercel</h3>
+                <p class="section-paragraph">
+                    Vercel is a platform for static sites and serverless functions with an excellent developer experience.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Deploying to Vercel</div>
+                    <pre><span class="comment"># Install the Vercel CLI</span>
+npm i -g vercel
+
+<span class="comment"># Deploy your site</span>
+vercel --prod</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    Like Netlify, you can also connect your Git repository to Vercel for automatic deployments:
+                </p>
+                
+                <div class="list-item">Sign up for a Vercel account and import your Git repository.</div>
+                <div class="list-item">Vercel will automatically detect that you're using Create React App and configure the build settings.</div>
+                <div class="list-item">Deploy your site.</div>
+                
+                <h3 class="section-subtitle">GitHub Pages</h3>
+                <p class="section-paragraph">
+                    GitHub Pages is a free static site hosting service that takes HTML, CSS, and JavaScript files from a repository and publishes them to a website.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Deploying to GitHub Pages</div>
+                    <pre><span class="comment"># Install the gh-pages package</span>
+npm install gh-pages --save-dev
+
+<span class="comment"># Add the following to your package.json</span>
+<span class="string">"homepage"</span>: <span class="string">"https://yourusername.github.io/your-repo-name"</span>,
+<span class="string">"scripts"</span>: {
+  <span class="string">"predeploy"</span>: <span class="string">"npm run build"</span>,
+  <span class="string">"deploy"</span>: <span class="string">"gh-pages -d build"</span>
+}
+
+<span class="comment"># Deploy your site</span>
+npm run deploy</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Server Hosting</h2>
+                <p class="section-paragraph">
+                    For React applications that require server-side rendering or a backend, you'll need to deploy to a server hosting platform:
+                </p>
+                
+                <h3 class="section-subtitle">Heroku</h3>
+                <p class="section-paragraph">
+                    Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Deploying to Heroku</div>
+                    <pre><span class="comment"># Install the Heroku CLI</span>
+npm install -g heroku
+
+<span class="comment"># Login to your Heroku account</span>
+heroku login
+
+<span class="comment"># Create a new Heroku app</span>
+heroku create
+
+<span class="comment"># Add a buildpack for Create React App</span>
+heroku buildpacks:create mars/create-react-app
+
+<span class="comment"># Deploy your code</span>
+git push heroku master</pre>
+                </div>
+                
+                <h3 class="section-subtitle">AWS</h3>
+                <p class="section-paragraph">
+                    Amazon Web Services (AWS) offers a variety of services for hosting React applications, including S3 for static sites and EC2 for server hosting.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Deploying to AWS S3</div>
+                    <pre><span class="comment"># Install the AWS CLI</span>
+pip install awscli
+
+<span class="comment"># Configure your AWS credentials</span>
+aws configure
+
+<span class="comment"># Create an S3 bucket</span>
+aws s3 mb s3://your-bucket-name
+
+<span class="comment"># Sync your build directory to the S3 bucket</span>
+aws s3 sync build/ s3://your-bucket-name --delete
+
+<span class="comment"># Set up static website hosting</span>
+aws s3 website s3://your-bucket-name --index-document index.html --error-document index.html</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Docker Deployment</h2>
+                <p class="section-paragraph">
+                    Docker allows you to package your React application with all of its dependencies into a standardized unit for software development.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Dockerfile</div>
+                    <pre><span class="comment"># Build stage</span>
+<span class="keyword">FROM</span> node:14 <span class="keyword">as</span> build
+<span class="keyword">WORKDIR</span> /app
+<span class="keyword">COPY</span> package*.json ./
+<span class="keyword">RUN</span> npm install
+<span class="keyword">COPY</span> . .
+<span class="keyword">RUN</span> npm run build
+
+<span class="comment"># Production stage</span>
+<span class="keyword">FROM</span> nginx:stable-alpine
+<span class="keyword">COPY</span> --from=build /app/build /usr/share/nginx/html
+<span class="keyword">EXPOSE</span> 80
+<span class="keyword">CMD</span> [<span class="string">"nginx"</span>, <span class="string">"-g"</span>, <span class="string">"daemon off;"</span>]</pre>
+                </div>
+                
+                <div class="code-block">
+                    <div class="code-title">Building and Running the Docker Image</div>
+                    <pre><span class="comment"># Build the Docker image</span>
+docker build -t my-react-app .
+
+<span class="comment"># Run the Docker container</span>
+docker run -p 8080:80 my-react-app</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Environment Variables</h2>
+                <p class="section-paragraph">
+                    When deploying your React application, you'll often need to configure environment variables for different environments (development, staging, production).
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">.env.production</div>
+                    <pre>REACT_APP_API_URL=https://api.example.com
+REACT_APP_ENV=production</pre>
+                </div>
+                
+                <p class="section-paragraph">
+                    In your code, you can access these variables using process.env:
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Using Environment Variables</div>
+                    <pre><span class="keyword">const</span> <span class="function">apiUrl</span> = process.env.REACT_APP_API_URL;</pre>
+                </div>
+                
+                <h2 class="section-subtitle">Progressive Web App (PWA)</h2>
+                <p class="section-paragraph">
+                    Create React App supports building Progressive Web Apps (PWAs) out of the box. PWAs are web applications that are reliable, fast, and engaging.
+                </p>
+                
+                <div class="code-block">
+                    <div class="code-title">Enabling PWA</div>
+                    <pre><span class="comment"># Install the PWA plugin</span>
+npm install @craco/craco @craco/craco-pwa-workbox
+
+<span class="comment"># Create a craco.config.js file</span>
+<span class="keyword">const</span> { CracoPwaPlugin } = <span class="function">require</span>(<span class="string">'@craco/craco-pwa-workbox'</span>);
+
+<span class="keyword">module.exports</span> = {
+  <span class="attr">plugins</span>: [
+    {
+      <span class="attr">plugin</span>: CracoPwaPlugin,
+      <span class="attr">options</span>: {
+        <span class="attr">workboxOptions</span>: {
+          <span class="comment">// Your custom workbox options</span>
+        }
+      }
+    }
+  ]
+};</pre>
+                </div>
+                
+                <div class="note-box">
+                    <div class="note-box-title">Note</div>
+                    <p>When deploying your React application, make sure to test it thoroughly in the production environment. Issues that don't appear in development can surface in production due to differences in configuration, optimization, and environment.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Sidebar navigation
+        const sidebarItems = document.querySelectorAll('.sidebar-item');
+        const contentSections = document.querySelectorAll('.content-section');
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+
+        // Function to show content section
+        function showContent(sectionId) {
+            // Hide all content sections
+            contentSections.forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show the selected content section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Update active sidebar item
+            sidebarItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('data-section') === sectionId) {
+                    item.classList.add('active');
+                }
+            });
+            
+            // Close sidebar on mobile after selection
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('active');
+            }
+        }
+
+        // Add click event to sidebar items
+        sidebarItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const sectionId = item.getAttribute('data-section');
+                showContent(sectionId);
+            });
+        });
+
+        // Toggle sidebar on mobile
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(e.target) && 
+                !menuToggle.contains(e.target) &&
+                sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Add syntax highlighting to code blocks
+        document.addEventListener('DOMContentLoaded', () => {
+            const codeBlocks = document.querySelectorAll('.code-block pre');
+            
+            codeBlocks.forEach(block => {
+                let html = block.innerHTML;
+                
+                // Simple syntax highlighting
+                html = html.replace(/(function|const|let|var|return|if|else|for|while|do|switch|case|break|continue|default|class|extends|import|export|from|async|await|try|catch|finally|throw|new|this|super|static|get|set)\b/g, '<span class="keyword">$1</span>');
+                html = html.replace(/('.*?'|".*?")/g, '<span class="string">$1</span>');
+                html = html.replace(/(\/\/.*?$|\/\*[\s\S]*?\*\/)/gm, '<span class="comment">$1</span>');
+                html = html.replace(/(&lt;\/?\w+|&gt;|\/&gt;)/g, '<span class="tag">$1</span>');
+                html = html.replace(/(\w+)(?=\s*=|:)/g, '<span class="attr">$1</span>');
+                html = html.replace(/(=\s*)(('.*?'|".*?"|\w+))/g, '$1<span class="value">$2</span>');
+                
+                block.innerHTML = html;
+            });
+        });
+    </script>
+</body>
+</html>
